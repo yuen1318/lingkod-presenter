@@ -1371,9 +1371,15 @@
 
     function renderLyricMarkup(text) {
         if (!text) return '';
-        return escapeHtmlText(text)
-            .replace(LYRIC_TAG_PATTERN, (match, tag, content) =>
+        // Iterate so nested tags (e.g. [C1][F1]…[/F1]…[/C1]) render at every level
+        let out = escapeHtmlText(text);
+        let prev;
+        do {
+            prev = out;
+            out = out.replace(LYRIC_TAG_PATTERN, (match, tag, content) =>
                 `<span class="${LYRIC_TAG_CLASSES[tag]}">${content}</span>`);
+        } while (out !== prev);
+        return out;
     }
 
     function removeLyricFormattingTags(text) {

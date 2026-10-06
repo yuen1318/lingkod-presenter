@@ -4973,7 +4973,7 @@ const rawSongs = [
             
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "PSALM 4",
@@ -4993,7 +4993,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "PSALM 91",
@@ -5033,7 +5033,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "[C1]GROUP[/C1]",
@@ -5049,7 +5049,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "CANTOR",
@@ -5059,6 +5059,494 @@ const rawSongs = [
                 name: "[C1]GROUP[/C1]",
                 lyrics: "[C1]Amen[/C1]"
             }
+        ]
+    },
+    {
+        title: "Morning Prayer WK1 Monday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 5)[/F1]\nI lift up my heart to you, O Lord, and you will hear my morning prayer." },
+            { name: "PSALM 5", lyrics: "To my words give ear, O Lord,\ngive heed to my groaning.\nAttend to the sound of my cries,\nmy King and my God.\n[C1]It is you whom I invoke, O Lord.\nIn the morning you hear me;\nin the morning I offer you my prayer,\nwatching and waiting.[/C1]" },
+            { name: "PSALM 5", lyrics: "You are no God who loves evil;\nno sinner is your guest.\nThe boastful shall not stand their ground\nbefore your face.\n[C1]You hate all who do evil;\nyou destroy all who lie.\nThe deceitful and bloodthirsty man\nthe detests.[/C1]" },
+            { name: "PSALM 5", lyrics: "But I through the greatness of your love\nhave access to your house.\nI bow down before your holy temple.\nFilled with awe.\n[C1]+ Lead me, Lord, in your justice,\nbecause of those who lie in wait;\nmake clear your way before me.[/C1]" },
+            { name: "PSALM 5", lyrics: "No truth can be found in their mouths,\ntheir heart is all mischief,\ntheir throat a wide-open grave,\nall honey their speech.\n[C1]All those who protect shall be glad\nand ring out their joy.\nYou shelter them; in you they rejoice,\nthose who love Your name.[/C1]" },
+            { name: "PSALM 5", lyrics: "It is you who bless the just man, Lord:\nyou surround Him with favor as with a shield." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 5)[/F1]\nI lift up my heart to you, O Lord, and you will hear my morning prayer.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 29)[/F1]\nAdore the Lord in his holy court" },
+            { name: "PSALM 29", lyrics: "O give the Lord, you sons of God,\ngive the Lord glory and power;\ngive the Lord the glory of His name.\nAdore the Lord in his holy court.\n[C1]The Lord’s voice resounding on the waters,\nthe Lord on the immensity of waters;\nthe voice of the Lord, full of power,\nthe voice of the Lord, full of splendor.[/C1]" },
+            { name: "PSALM 29", lyrics: "The Lord’s voice shattering the cedars,\nthe Lord shatters the cedars of Lebanon;\nhe make Lebanon leap like a calf\nand Sirion like a your wild-ox.\n[C1]+ The Lord’s voice flashes flames of fire.\nThe Lord’s voice shaking the wilderness,\nthe Lord shakes the wilderness of Kadesh;\nthe Lord’s voice rending the oak tree\nand stripping the forest bare.[/C1]" },
+            { name: "PSALM 29", lyrics: "The God of Glory thunders.\nIn His temple they all cry: “Glory!”\nThe Lord sat enthroned over the flood;\nthe Lord sits as king for ever.\n[C1]The Lord will give strength to his people,\nthe Lord will bless his people with peace.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 29)[/F1]\nAdore the Lord in his holy court[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK1 Tuesday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 24)[/F1]\nThe man whose deeds are blameless and whose heart is pure will climb the mountain of the Lord." },
+            { name: "PSALM 24", lyrics: "The Lord’s is the earth and its fullness,\nthe world and all its peoples.\nIt is he who set it on the seas;\non the waters He made it firm.\n[C1]Who shall climb the mountain of the Lord?\nWho shall stand in His holy place?\n+ The man with clean hands and pure heart,\nwho desires not worthless things,\nwho has not sworn so as to deceive his neighbor.[/C1]" },
+            { name: "PSALM 24", lyrics: "He shall receive blessings from the Lord\nand reward from the God who saves him.\nSuch are the men who seek Him,\nseek the face of the God of Jacob.\n[C1]+ O gates, lift high your heads;\ngrow higher, ancient doors.\nLet Him enter, the king of glory![/C1]" },
+            { name: "PSALM 24", lyrics: "+ Who I the king of glory?\nThe Lord, the mighty, the valiant,\nthe Lord, the valiant in war.\n[C1]+ O gates, lift high your heads;\ngrow higher, ancient doors.\nLet Him enter, the king of glory![/C1]" },
+            { name: "PSALM 24", lyrics: "+ Who is he, the king of glory?\nHe, the Lord of armies,\nhe is the king of glory." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 24)[/F1]\nThe man whose deeds are blameless and whose heart is pure will climb the mountain of the Lord.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 33)[/F1]\nThe loyal heart must praise the Lord" },
+            { name: "PSALM 33", lyrics: "Ring out your joy to the Lord, O you just;\nfor praise is fitting for loyal hearts.\n[C1]Give thanks to the Lord upon the lyre,\nwith a ten-stringed harp sing Him songs.\nO sing Him a song that is new,\nplay loudly, will all your skill.[/C1]" },
+            { name: "PSALM 33", lyrics: "For the word of the Lord is faithful\nand all His works to be trusted.\nThe Lord loves justice and right\nand fills the earth with His love.\n[C1]By His word the heavens were made,\nby the breath of his mouth all the stars.\nHe collects the waves of the ocean;\nhe stores up the depths of the sea.[/C1]" },
+            { name: "PSALM 33", lyrics: "Let all the earth fear the Lord,\nall who live in the world revere Him.\nHe spoke; and it came to be.\nhe commanded; it sprang into being.\n[C1]He frustrates the designs of the nations,\nhe defeats the plans of the peoples.\nHis own designs shall stand for ever,\nthe plans of his heart from age to age.[/C1]" },
+            { name: "PSALM 33", lyrics: "They are happy, whose God is the Lord,\nthe people he has chosen as his own.\nFrom the heavens the Lord looks forth,\nhe sees all the children of men.\n[C1]From the place where he dwells He gazes\non all the dwellers of the earth,\nhe who shapes the hearts of them all\nand considers all their deeds.[/C1]" },
+            { name: "PSALM 33", lyrics: "A king is not saved by his army,\nnor a warrior preserved by his strength.\nA vain hope for safety is the horse;\ndespite its power it cannot save.\n[C1]The Lord looks on those who revere him,\non those who hope in his love,\nto rescue their souls from death,\nto keep them alive in famine.[/C1]" },
+            { name: "PSALM 33", lyrics: "Our soul is waiting for the Lord.\nThe Lord is our help and our shield.\nIn him do our hearts find joy.\nWe trust in his Holy Name.\n[C1]May your love be upon us, O Lord,\nas we place all our hope in you.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 33)[/F1]\nThe loyal heart must praise the Lord.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK1 Wednesday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 36)[/F1]\nOur Lord, in your light we see light itself." },
+            { name: "PSALM 36", lyrics: "Sin speaks to the sinner\nin the depths of his heart.\nThere is no fear of God\nbefore his eyes\n[C1]He so flatters himself in hi mind\nthat he knows not his guilt.\nIn his mouth are mischief and deceit.\nAll wisdom is gone.[/C1]" },
+            { name: "PSALM 36", lyrics: "He plots the defeat of goodness\nas he lies on his bed.\nHe has set his foot on evil ways,\nhe clings to what is evil.\n[C1]Your love, Lord, reaches to heaven;\nyour truth to the skies.\nYour justice is like God’s mountain,\nyour judgments like the deep.[/C1]" },
+            { name: "PSALM 36", lyrics: "To both man and the beast you give protection.\nO Lord, how precious is your love\nmy God, the sons of men\nfind refuge in the shelter of your wings.\n[C1]They feast on the riches of your house;\nthey drink from the stream of your delight.\nIn you is the source of life\nand in your light we see light.[/C1]" },
+            { name: "PSALM 36", lyrics: "Keep on loving those who know you,\ndoing justice for upright hearts.\nLet the foot of the proud not crush me\nnor the hand of the wicked cast me out.\n[C1]See how the evil-doers fall!\nFlung down, they shall never arise.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 36)[/F1]\nO Lord, in your light we see light itself.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 47)[/F1]\nExult in God’s presence with hymns of praise." },
+            { name: "PSALM 47", lyrics: "All peoples, clap your hands,\ncry to God with shouts of joy!\nFor the Lord, the Most High, we must fear,\ngreat king over all the earth.\n[C1]He subdues peoples under us\nand nations under our feet.\nOur inheritance, our glory, is from Him,\ngive to Jacob out of love.[/C1]" },
+            { name: "PSALM 47", lyrics: "God goes up with shouts of joy;\nthe Lord goes up with trumpet blast.\nSing praise for God, sing praise,\nsing praise to our King, sing praise.\n[C1]God is King of all the earth.\nSing praise with all your skill.\nGod is King over the nations;\nGod reigns on His holy throne.[/C1]" },
+            { name: "PSALM 47", lyrics: "The princes of the peoples are assembled\nwith the people of Abraham’s God.\nThe rulers of the earth belong to God,\nto God who reigns over all." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 47)[/F1]\nExult in God’s presence with hymns of praise.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK1 Thursday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 57)[/F1]\nAwake, lyre and harp, with praise let us awake the dawn" },
+            { name: "PSALM 57", lyrics: "Have mercy on me, God, have mercy\nfor in you my soul has taken refuge.\nIn the shadow of your wings I take refuge\ntill the storms of destruction pass by.\n[C1]I call to God the Most High,\nto God who has always been my help.\nMay He send from heaven and save me\nand shame those who assail me.[/C1]" },
+            { name: "PSALM 57", lyrics: "+ May God send His truth and His love.\nMy soul lies down among lions,\nwho would devour the sons of men.\nTheir teeth are spears and arrows,\ntheir tongue a sharpened sword.\n[C1]O God, arise above the heavens;\nmay your glory shine one earth![/C1]" },
+            { name: "PSALM 57", lyrics: "They laid a snare for my steps,\nmy soul was bowed down.\nThey dug a pit in my path\nbut fell in it themselves.\n[C1]My heart is ready, O God,\nmy heart is ready.[/C1]" },
+            { name: "PSALM 57", lyrics: "I will sing, I will sing your praise.\nAwake, my soul,\nawake, lyre and harp,\nI will awake the dawn.\n[C1]I will thank you, Lord, among the peoples,\namong the nations I will praise you\nfor your love reaches to the heavens\nand your truth to the skies.[/C1]" },
+            { name: "PSALM 57", lyrics: "O God, arise above the heavens;\nmay Your glory shine on earth!" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 57)[/F1]\nAwake, lyre and harp, with praise let us awake the dawn.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 48)[/F1]\nThe Lord is great and worthy to be praised in the city of our God." },
+            { name: "PSALM 48", lyrics: "The Lord is great and worthy to be praised\nin the city of our God.\nHis holy mountain rises in beauty,\nthe joy of all the earth.\n[C1]Mount Zion, true pole of the earth,\nthe Great King’s city!\nGod, in the midst of its citadels,\nhas shown himself its stronghold.[/C1]" },
+            { name: "PSALM 48", lyrics: "For the kings assembled together,\ntogether they advanced.\nThey saw; at once they were astounded;\ndismayed, they fled in fear.\n[C1]A trembling seized them there,\nlike the pangs of birth.\nBy the east wind you have destroyed\nthe ships of Tarshish.[/C1]" },
+            { name: "PSALM 48", lyrics: "As we have heard, so we have seen\nin the city of God,\nin the city of the Lord of hosts\nwhich God upholds for ever.\n[C1]O God, we ponder Your love\nwithin Your temple.\nYour praise, O God, like your name\nreaches to the ends of the earth.[/C1]" },
+            { name: "PSALM 48", lyrics: "With justice your right hand is filled.\nMount Zion rejoices;\nthe people of Judah rejoice\nat the sight of your judgements.\n[C1]Walk through Zion, walk all round it;\ncount the number of its towers.\nReview all its ramparts,\nexamine its castles,[/C1]" },
+            { name: "PSALM 48", lyrics: "That you may tell the next generation\nthat such is our God,\nour God for ever and always.\nIt is He who leads us." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 48)[/F1]\nThe Lord is great and worthy to be praised in the city of our God.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK2 Sunday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 118)[/F1]\nBlessed is he who comes in the name of the Lord, alleluia." },
+            { name: "PSALM 118", lyrics: "Give thanks to the Lord for he is good,\nfor his love endures for ever.\n[C1]Let the sons of Israel say:\n“His love endures for ever.”\nLet the sons of Aaron say:\n“His love endures for ever.”\nLet those who fear the Lord say:\n“His love endures for ever.”[/C1]" },
+            { name: "PSALM 118", lyrics: "I called to the Lord in my distress;\nhe answered and freed me.\nThe Lord is at my side; I do not fear.\nWhat can man do against me?\nThe Lord is at my side as my helper;\nI shall look down on my foes.\n[C1]It is better to take refuge in the Lord\nthan to trust in men:\nit is better to take refuge in the Lord\nthan to trust in princes.[/C1]" },
+            { name: "PSALM 118", lyrics: "The nations all encompassed me;\nin the Lord’s name I crushed them.\nThey encompassed me, compassed me about;\nin the Lord’s name I crushed them.\n+ They compassed me about like bees;\nthey blazed life a fire among thorns.\nIn the Lord’s name I crushed them.\n[C1]I was hard-pressed and was falling\nbut the Lord came to help me.\nThe Lord is my strength and my song;\nhe is my savior.\nThere are shouts of joy and victory\nin the tents of the just.[/C1]" },
+            { name: "PSALM 118", lyrics: "The Lord’s right had has triumphed;\nhis right hand raised me.\n+ The Lord’s right hand has triumphed;\nI shall not die, I shall live\nand recount His deeds.\nI was punished, I was punished by the Lord,\nbut not doomed to die.\n[C1]Open to me the gate of holiness:\nI will enter and give thanks.\nThis is the Lord’s own gate.\nWhere the just may enter.\nI will thank you for you have answered\nand you are my savior.[/C1]" },
+            { name: "PSALM 118", lyrics: "The stone which the builders rejected\nhas become the corner stone.\nThis is the work of the Lord,\na marvel in our eyes.\nThis day was made by the Lord;\nwe rejoice and are glad.\n[C1]O Lord, grant us salvation;\no Lord, grant us success.\nBlessed in the name of the Lord\nis he who comes.\nWe bless you from the house of the Lord;\nthe Lord is our light.[/C1]" },
+            { name: "PSALM 118", lyrics: "Go forward in procession with branches\neven to the altar.\nYou are my God, I thank you.\nMy God, I praise you.\nGive thanks to the Lord for He is good;\nfor His love endures for ever." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 118)[/F1]\nBlessed is he who comes in the name of the Lord, alleluia.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 150)[/F1]\nPraise the Lord for his infinite greatness, alleluia." },
+            { name: "PSALM 150", lyrics: "Praise God in his holy place,\npraise him in his mighty heavens.\nPraise him for his powerful deeds,\npraise his surpassing greatness.\n[C1]O praise him with sound of trumpet,\npraise him with lute and harp.\nPraise him with timbrel and dance,\npraise him with strings and pipes.[/C1]" },
+            { name: "PSALM 150", lyrics: "O praise him with resounding cymbals,\npraise him with clashing of cymbals.\nLet everything that lives and that breathes\ngive praise to the Lord." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 150)[/F1]\nPraise the Lord for his infinite greatness, alleluia.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK2 Monday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 42)[/F1]\nWhen will I come to the end of my pilgrimage and enter the presence of God?" },
+            { name: "PSALM 42", lyrics: "Like the deer that yearns\nfor running streams,\nso my soul is yearning\nfor you, my God\n[C1]My soul is thirsting for God,\nthe God of my life;\nwhen can I enter and see\nthe face of God?[/C1]" },
+            { name: "PSALM 42", lyrics: "My tears have become my bread,\nby night, by day,\nas I hear it said all the day long:\n“Where is your God?”\n[C1]These things will I remember\nas I pour out my soul:\nhow I would lead the rejoicing crowd\ninto the house of God,\namid cries of gladness and thanksgiving,\nthe throng wild with joy.[/C1]" },
+            { name: "PSALM 42", lyrics: "Why are you cast down, my soul,\nwhy groan within me?\nHope in God; I will praise Him still,\nmy savior and my God.\n[C1]My soul is cast down within me\nas I think of you\nfrom the country of Jordan and Mount Hermon,\nfrom the Hill of Mizar.[/C1]" },
+            { name: "PSALM 42", lyrics: "Deep is calling on deep,\nin the roar of waters:\nyour torrents and all your waves\nswept over me.\n[C1]By day the Lord will send\nhis loving kindness;\nby night I will sing to him,\npraise the God of my life.[/C1]" },
+            { name: "PSALM 42", lyrics: "I will say to God, my rock:\n“Why have you forgotten me?\nWhy do I go mourning,\noppressed by the foe?”\n[C1]With cries that pierce me to the heart,\nmy enemies revile me,\naaying to me all the day long:\n“Where is your God?”[/C1]" },
+            { name: "PSALM 42", lyrics: "Why are you cast down, my soul,\nwhy groan within me?\nHope in God; I will praise him still,\nmy savior and my God." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 42)[/F1]\nWhen will I come to the end of my pilgrimage and enter the presence of God?[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 19A)[/F1]\nThe vaults of heaven ring with your praise, O Lord." },
+            { name: "PSALM 19A", lyrics: "The heavens proclaim the glory of God\nand the firmament shows forth the work of his hands.\nDay unto day takes up the story\nand night unto night makes known the message.\n[C1]+ No speech, no word, no voice is heard\nyet their span extends through all the earth,\ntheir words to the utmost bounds of the world.[/C1]" },
+            { name: "PSALM 19A", lyrics: "+ There he has placed a tent for the sun,\nit comes forth like a bridegroom coming from his tent,\nrejoices like a champion to run its course.\n[C1]+ At the end of the sky is the rising of the sun;\nto the furthest end of the sky is its course.\nThere is nothing concealed from its burning heat.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 19A)[/F1]\nThe vaults of heaven ring with your praise, O Lord.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK2 Tuesday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 43)[/F1]\nLord, send forth your light and your truth." },
+            { name: "PSALM 43", lyrics: "Defend me, O God, and plead my cause\nagainst a godless nation.\nFrom a deceitful and cunning men\nrescue me, O God.\n[C1]Since you, O God, are my stronghold,\nwhy have you rejected me?\nWhy do I go mourning\noppressed by the foe?[/C1]" },
+            { name: "PSALM 43", lyrics: "O send forth your light and your truth;\nlet these be my guide.\nLet them bring me to your holy mountain\nto the place where you dwell.\n[C1]And I will come to the altar of God,\nthe God of my joy.\nMy redeemer, I will thank you on the harp,\no God, my God.[/C1]" },
+            { name: "PSALM 43", lyrics: "Why are you cast down, my soul,\nwhy groan within me?\nHope in God; I will praise him still,\nmy savior and my God." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 43)[/F1]\nLord, send forth your light and your truth.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 65)[/F1]\nTo you, O God, our praise is due in Zion." },
+            { name: "PSALM 65", lyrics: "To you, our praise is due\nin Zion, O God.\nTo You we pay our vows,\nyou who hear our prayer.\n[C1]To you all flesh will come\nwith its burden of sin.\nToo heavy for us our offenses,\nbut you wipe them away.[/C1]" },
+            { name: "PSALM 65", lyrics: "Blessed is he whom you choose and call\nto dwell in your courts.\nWe are filled with the blessings of your house,\nof your holy temple.\n[C1]You keep your pledge with wonders,\nO God our savior,\nthe hope of all the earth\nand of far distant isles.[/C1]" },
+            { name: "PSALM 65", lyrics: "You uphold the mountains with your strength,\nyou are girded with power.\n+ You still the roaring of the seas,\nthe roaring of their waves\nand the tumult of the peoples.\n[C1]The ends of the earth stand in awe\nat the sight of your wonders.\nThe lands of sunrise and sunset\nyou fill with your joy.[/C1]" },
+            { name: "PSALM 65", lyrics: "You care for the earth, give it water,\nyou fill it with riches.\nYour river in heaven brims over\nto provide its grain.\n[C1]And thus you provide for the earth;\nyou drench its furrows,\nyou level it, soften it with showers,\nyou bless its growth.[/C1]" },
+            { name: "PSALM 65", lyrics: "+ You crown the year with your goodness.\nAbundance flows in your steps,\nIn the pastures of the wilderness it flows.\n[C1]The hills are girded with joy,\nthe meadows covered with flocks,\nthe valleys are decked with wheat.\nThey shout for joy, yes, they sing.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 65)[/F1]\nTo you, O God, our praise is due in Zion.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK2 Wednesday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 77)[/F1]\nO God, all your ways are holy; what god can compare with our God?" },
+            { name: "PSALM 77", lyrics: "+ In the day of my distress I sought the Lord.\nMy hands were raised at night without ceasing;\nmy soul refused to be consoled.\nI remembered my God and I groaned.\nI pondered and my spirit fainted.\n[C1]You withheld sleep from my eyes.\nI was troubled, I could not speak.\nI thought of the days of long ago\nand remembered the years long past.\nAt night I mused within my heart.\nI pondered and my spirit questioned.[/C1]" },
+            { name: "PSALM 77", lyrics: "“Will the Lord reject us forever?\nWill He show us His favor no more?\nHas His love vanished for ever?\nHas His promise come to an end?\nDoes God forget His mercy\nor in anger withhold His compassion?”\n[C1]I said: “This is what causes my grief;\nthat the way of the Most High has changed.”\nI remember the deeds of the Lord,\nI remember your wonders of old,\nI muse on all your works\nand ponder your mighty deeds.[/C1]" },
+            { name: "PSALM 77", lyrics: "Your ways, O God, are holy.\nWhat god is great as our God?\nYou are the God who works wonders.\nYou showed your power among the peoples.\nYour strong arm redeemed your people,\nThe sons of Jacob and Joseph.\n[C1]The waters saw you, O God,\nthe waters saw you and trembled;\nthe depths were moved with terror.\nThe clouds poured down rain,\nthe skies sent forth their voice;\nyour arrows flashed to and fro.[/C1]" },
+            { name: "PSALM 77", lyrics: "Your thunder rolled round the sky,\nyour flashes lighted up the world.\nThe earth was moved and trembled\nwhen your way led through the sea,\nyour path through the mighty waters,\nand no one saw your footprints.\n[C1]You guided your people like a flock\nby the hand of Moses and Aaron.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 77)[/F1]\nO God, all your ways are holy; what god can compare with our God?[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 97)[/F1]\nThe Lord is king, let the earth rejoice." },
+            { name: "PSALM 97", lyrics: "The Lord is king, let the earth rejoice,\nlet all the coastlands be glad.\nCloud and darkness are his raiment;\nhis throne, justice and right.\n[C1]A fire prepares His path;\nit burns up His foes on every side.\nHis lightnings light up the world,\nthe earth trembles at the sight.[/C1]" },
+            { name: "PSALM 97", lyrics: "The mountains melt like wax\nbefore the Lord of all the earth.\nThe skies proclaim His justice;\nall peoples see his glory.\n[C1]+ Let those who serve idols be ashamed,\nthose who boast of their worthless gods.\nAll your spirits, worship him.[/C1]" },
+            { name: "PSALM 97", lyrics: "+ Zion hears and is glad;\nthe people of Judah rejoice\nbecause of your judgements, O Lord.\n[C1]+ For you indeed are the Lord,\nmost high above all the earth,\nexalted far above all spirits.[/C1]" },
+            { name: "PSALM 97", lyrics: "+ The Lord loves those who hate evil;\nhe guards the souls of his saints;\nhe sets them free from the wicked.\n[C1]Light shines forth for the just\nand joy for the upright in heart.\nRejoice, you just, in the Lord;\ngive glory to his holy name.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 97)[/F1]\nThe Lord is king, let the earth rejoice.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK2 Thursday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 80)[/F1]\nStir up your mighty power, Lord; come to our aid." },
+            { name: "PSALM 80", lyrics: "O shepherd of Israel, hear us,\nyou who lead Joseph’s flock,\nshine forth from your cherubim throne\nupon Ephraim, Benjamin, Manasseh.\nO Lord, rouse up your might,\no Lord, come to our help.\n[C1]God of hosts, bring us back;\nlet your face shine on us and we shall be saved.[/C1]" },
+            { name: "PSALM 80", lyrics: "Lord God of hosts, how long\nwill you frown on your people’s plea?\nYou have fed them with tears for their bread,\nan abundance of tears for their drink.\nYou have made us the taunt of our neighbors,\nour enemies laugh us to scorn.\n[C1]God of hosts, bring us back;\nlet your face shine on us and we shall be saved.[/C1]" },
+            { name: "PSALM 80", lyrics: "You brought a vine out of Egypt;\nto plant it you drove out the nations.\nBefore it you cleared the ground;\nit took root and spread through the land\n[C1]The mountains were covered with its shadow,\nthe cedars of God with its boughs.\nIt stretched out its branches to the sea,\nto the Great River it stretched out its shoots.[/C1]" },
+            { name: "PSALM 80", lyrics: "Then why have you broken down its walls?\nIt is plucked by all who pass by.\nIt is ravaged by the boar of the forest,\ndevoured by the beasts of the field.\n[C1]God of hosts, turn again, we implore,\nlook down from heaven and see.\nVisit this vine and protect it,\nthe vine your right hand has planted.\nMen have burnt it with fire and destroyed it.\nMay they perish at the frown of your face.[/C1]" },
+            { name: "PSALM 80", lyrics: "May your hand be on the man you have chosen,\nthe man you have given your strength.\nAnd we shall never forsake you again:\ngive us life that we may call upon your name.\n[C1]God of hosts, bring us back;\nLet your face shine on us and we shall be saved.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 80)[/F1]\nStir up your mighty power, Lord: come to our aid.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK2 Friday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 51)[/F1]\nA humble, contrite heart, O God, you will not spurn." },
+            { name: "PSALM 51", lyrics: "Have mercy on me, O God, in your kindness.\nIn your compassion blot out my offense.\nO wash me more and more from my guilt\nand cleanse me from my sin.\n[C1]My offenses truly I know them;\nmy sin is always before me.\nAgainst you, you alone, have I sinned;\nwhat is evil in your sight I have done.[/C1]" },
+            { name: "PSALM 51", lyrics: "That you may be justified when you give sentence\nand be without reproach when you judge.\nO see, in guilt I was born,\na sinner was I conceived.\n[C1]Indeed you love truth in the heart;\nthen in the secret of my heart teach me wisdom.\nO purify me, then I shall be clean;\nO wash me, I shall be whiter than snow.[/C1]" },
+            { name: "PSALM 51", lyrics: "Make me hear rejoicing and gladness,\nthat the bones you have crushed may revive.\nFrom my sins turn away your face\nand blot out all my guilt.\n[C1]A pure heart create for me, O God,\nput a steadfast spirit within me.\nDo not cast me away from your presence,\nnor deprive me of your holy spirit.[/C1]" },
+            { name: "PSALM 51", lyrics: "Give me again the joy of your help;\nwith a spirit of fervor sustain me.\nThat I may teach transgressors your ways\nand sinners may return to you.\n[C1]O rescue me, God, my helper,\nand my tongue shall ring out your goodness.\nO Lord, open my lips\nand my mouth shall declare your praise.[/C1]" },
+            { name: "PSALM 51", lyrics: "For in sacrifice you take no delight,\nburnt offering from me you would refuse,\nmy sacrifice, a contrite spirit.\nA humbled, contrite heart you will not spurn.\n[C1]In your goodness, show favor to Zion:\nrebuild the walls of Jerusalem.\nThe you will be pleased with lawful sacrifice,\nholocausts offered on your altar.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 51)[/F1]\nA humble, contrite heart, O God, you will not spurn.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 147:12-20)[/F1]\nO praise the Lord, Jerusalem!" },
+            { name: "PSALM 147:12-20", lyrics: "O praise the Lord Jerusalem\nZion, praise your God!\n[C1]He has strengthened the bars of your gates,\nhe has blessed the children within you.\nHe established peace on your borders,\nhe feeds you with finest wheat.[/C1]" },
+            { name: "PSALM 147:12-20", lyrics: "He sends his word to the earth\nand swiftly runs his command.\nHe showers down snow white as wool,\nhe scatters hoar-frost like ashes.\n[C1]He hurls down hailstones like crumbs.\nThe waters are frozen at his touch;\nhe sends forth his word and it melts them:\nat the breath of his mouth the waters flow.[/C1]" },
+            { name: "PSALM 147:12-20", lyrics: "He makes his word known to Jacob,\nto Israel his laws and decrees.\nHe has not dealt thus with other nations;\nhe has not taught them his decrees." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 147:12-20)[/F1]\nO praise the Lord, Jerusalem![/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK2 Saturday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 92)[/F1]\nAs morning breaks we sing of your mercy, Lord, and night will find us proclaiming your fidelity." },
+            { name: "PSALM 92", lyrics: "It is good to give thanks to the Lord,\nto make music to your name, O Most High,\nto proclaim your love in the morning\nand your truth in the watches of the night,\non the ten-stringed lyre and the lute,\nwith the murmuring sound of the harp.\n[C1]Your deeds, O Lord, have made me glad;\nfor the work of your hands I shout with joy.\nO Lord, how great are your works!\nHow deep are your designs!\nThe foolish man cannot know this\nand the fool cannot understand.[/C1]" },
+            { name: "PSALM 92", lyrics: "Though the wicked spring up like grass\nand all who do evil thrive:\nthey are doomed to be eternally destroyed.\nBut you, Lord, are eternally on high.\nSee how your enemies perish;\nall doers of evil are scattered.\n[C1]To me you give the wild-ox’s strength;\nyou anoint me with the purest oil.\nMy eyes looked in triumph on my foes;\nmy ears heard gladly of their fall.\nThe just will flourish like the palm-tree\nand grow like a Lebanon cedar.[/C1]" },
+            { name: "PSALM 92", lyrics: "Planted in the house of the Lord\nthey will flourish in the courts of our God,\nstill bearing fruit when the are old,\nstill full of sap, still green,\nto proclaim that the Lord is just;\nin him, my rock, there is no wrong." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 92)[/F1]\nAs morning breaks we sing of your mercy, Lord, and night will find us proclaiming your fidelity.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 8)[/F1]\nHow wonderful is your name, O Lord, in all creation." },
+            { name: "PSALM 8", lyrics: "How great is your name, O Lord our God,\nthrough all the earth!\n[C1]Your majesty is praised above the heavens;\non the lips of children and of babes\nyou have found praise to foil your enemy,\nto silence the foe and the rebel.[/C1]" },
+            { name: "PSALM 8", lyrics: "When I see the heavens, the work of your hands,\nthe moon and the stars which you arranged,\nwhat is man that you should keep him in mind,\nmortal man that you care for him?\n[C1]Yet you have made him little less than a god;\nwith glory and honor you crowned him,\ngave him power over the works of your hand,\nput all things under his feet.[/C1]" },
+            { name: "PSALM 8", lyrics: "All of them, sheep and cattle,\nyes, even the savage beasts,\nbirds of the air, and fish\nthat make their way through the waters.\n[C1]How great is your name, O Lord, our God,\nthrough all the earth![/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 8)[/F1]\nHow wonderful is your name, O Lord, in all creation.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+{
+        title: "Morning Prayer WK3 Sunday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 93)[/F1]\nGlorious is the Lord on high, alleluia." },
+            { name: "PSALM 93", lyrics: "+ The Lord is king, with majesty enrobed;\nthe Lord has robed himself with might,\nhe has girded himself with power.\n[C1]+ The world you made firm, not to be moved;\nyour throne has stood firm from the old.\nFrom all eternity, O Lord, you are.[/C1]" },
+            { name: "PSALM 93", lyrics: "+ The waters have lifted up, O Lord,\nthe waters have lifted up their voice,\nthe waters have lifted up their thunder.\n[C1]+ Greater than the roar of mighty waters,\nmore glorious than the surgings of the sea,\nthe Lord is glorious on high.[/C1]" },
+            { name: "PSALM 93", lyrics: "+ Truly your decrees are to be trusted.\nHoliness is fitting to your house,\nO Lord, until the end of time." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 93)[/F1]\nGlorious is the Lord on high, a lleluia.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 148)[/F1]\nPraise the Lord from the heavens, alleluia." },
+            { name: "PSALM 148", lyrics: "Praise the Lord from the heavens,\npraise him in the heights.\nPraise him, all his angels,\npraise him, all his host.\n[C1]Praise him, sun and moon,\npraise him, shining stars,\npraise him, highest heavens,\nand the waters above the heavens.[/C1]" },
+            { name: "PSALM 148", lyrics: "Let them praise the name of the Lord.\nHe commanded: they were made.\nHe fixed them for ever,\ngave a law which shall not pass away.\n[C1]Praise the Lord from the earth,\nsea creatures and all oceans,\nfire and hail, snow and mist,\nstormy winds that obey his word;[/C1]" },
+            { name: "PSALM 148", lyrics: "all mountains and hills,\nall fruit trees and cedars,\nbeasts, wild and tame,\nreptile and birds on the wing;\n[C1]all earth’s kings and peoples,\nearth’s princes and rulers;\nyoung men and maidens,\nold men together with children.[/C1]" },
+            { name: "PSALM 148", lyrics: "Let them praise the name of the Lord\nfor he alone is exalted.\nThe splendor of his name\nreaches beyond heaven and earth.\n[C1]He exalts the strength of his people.\nHe is the praise of all his saints,\nof the sons of Israel,\nof the people to whom he comes close.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 148)[/F1]\nPraise the Lord from the heavens, alleluia.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+{
+        title: "Morning Prayer WK3 Monday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 84)[/F1]\nBlessed are the who dwell in your house, O Lord." },
+            { name: "PSALM 84", lyrics: "How lovely is your dwelling place,\nLord, God of hosts.\n[C1]My soul is longing and yearning,\nis yearning for the courts of the Lord.\nMy heart and my soul ring out their joy\nto God, the living God.[/C1]" },
+            { name: "PSALM 84", lyrics: "The sparrow herself finds a home\nand the swallow a nest for her brood;\nshe lays her young by your altars,\nLord of hosts, my king and my God.\n[C1]They are happy ,who dwell in your house,\nfor ever singing your praise.\nThey are happy, whose strength is in you,\nin whose hearts are the roads to Zion.[/C1]" },
+            { name: "PSALM 84", lyrics: "+ As they go through the Bitter Valley\nthey make it a place of springs,\nthe autumn rain covers it with blessings.\nThey walk with ever growing strength,\nthey will see the God of gods in Zion.\n[C1]The Lord God of hosts, hear my prayer,\ngive ear, O God of Jacob.\nTurn your eyes, O God, our shield,\nlook on the face of your anointed.[/C1]" },
+            { name: "PSALM 84", lyrics: "One day within your courts\nis better than a thousand elsewhere.\nThe threshold of the house of God\nI prefer to the dwellings of the wicked.\n[C1]For the Lord God is a rampart, a shield;\nhe will give us his favor and glory.\nThe Lord will not refuse any good\nto those who walk without blame.[/C1]" },
+            { name: "PSALM 84", lyrics: "Lord, God of hosts,\nhappy the man who trusts in you!" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 84)[/F1]\nBlessed are they who dwell in your house, O Lord.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 96)[/F1]\nSing to the Lord and bless his name." },
+            { name: "PSALM 96", lyrics: "+ O sing a new song to the Lord\nsing to the Lord, all the earth.\nO sing to the Lord, bless his name.\n[C1]+ Proclaim his help day by day,\ntell among the nations his glory,\nand his wonders among all the peoples.[/C1]" },
+            { name: "PSALM 96", lyrics: "+ The Lord is great and worthy of praise,\nto be feared above all gods;\nthe gods of the heathens are naught.\n[C1]+ It was the Lord who made the heavens,\nhis are majesty and state and power\nand splendor in his holy place.[/C1]" },
+            { name: "PSALM 96", lyrics: "+ Give the Lord, you families of peoples,\ngive the Lord glory and power,\ngive the Lord the glory of his name.\n[C1]+ Bring an offering and enter his courts,\nworship the Lord in his temple.\nO earth, tremble before him.[/C1]" },
+            { name: "PSALM 96", lyrics: "+ Proclaim to the nation: “God is king,”\nthe world he made firm in its place;\nhe will judge the peoples in fairness.\n[C1]Let the heavens rejoice and earth be glad,\nlet the sea and all within it thunder praise,\nlet the land and all it bears rejoice,\nall the trees of the wood shout for joy[/C1]" },
+            { name: "PSALM 96", lyrics: "at the presence of the Lord for he comes,\nhe comes to rule the earth.\nWith justice he will rule the world,\nhe will judge the peoples with his truth." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 96)[/F1]\nSing to the Lord and bless his name.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+{
+        title: "Morning Prayer WK3 Tuesday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 85)[/F1]\nLord, you have blessed your land; you have forgiven the sins of your people." },
+            { name: "PSALM 85", lyrics: "O Lord, you once favored your land\nand revived the fortunes of Jacob,\nyou forgave the guilt of your people\nand covered all their sins.\nYou averted all your rage,\nyou calmed the heat of your anger.\n[C1]Revive us now, God, our helper!\nPut an end to your grievance against us.\nWill you be angry with us forever,\nwill your anger never cease?[/C1]" },
+            { name: "PSALM 85", lyrics: "Will you not restore again our life\nthat your people may rejoice in you?\nLet us see, O Lord, your mercy\nand give us your saving help.\n[C1]I will hear what the Lord God has to say,\na voice that speaks of peace,\npeace for his people and his friends\nand those who turn to him in their hearts.\nHis help is near for those who fear him\nand his glory will dwell in our land.[/C1]" },
+            { name: "PSALM 85", lyrics: "Mercy and faithfulness have met;\njustice and peace have embraced.\nFaithfulness shall spring from the earth\nand justice shall look down from heaven.\n[C1]The Lord will make us prosper\nand our earth shall yield its fruit.\nJustice shall march before him\nand peace shall follow his steps.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 85)[/F1]\nLord, you have blessed your land; you have forgiven the sins of your people.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 67)[/F1]\nLord, let the light of your face shine upon us." },
+            { name: "PSALM 67", lyrics: "O God, be gracious and bless us\nand let your face shed its light upon us.\nSo will your ways be known upon earth\nand all nations learn your saving help.\n[C1]Let the people praise you, O God;\nlet all the peoples praise you.[/C1]" },
+            { name: "PSALM 67", lyrics: "Let the nations be glad and exult\nfor you rule the world with justice.\nWith fairness you rule the peoples,\nyou guide the nations on earth.\n[C1]Let the people praise you, O God;\nlet all the peoples praise you.[/C1]" },
+            { name: "PSALM 67", lyrics: "The earth has yielded its fruit\nfor God, our God, has blessed us.\nMay God still give us his blessing\ntill the ends of the earth revere him.\n[C1]Let the people praise you, O God;\nlet all the peoples praise you.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 67)[/F1]\nLord, let the light of your face shine upon us.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+{
+        title: "Morning Prayer WK3 Wednesday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 86)[/F1]\nGive joy to your servant, Lord; to you I lift up my heart." },
+            { name: "PSALM 86", lyrics: "Turn your ear, O Lord, and give answer\nfor I am poor and needy.\nPreserve my life, for I am faithful:\nsave the servant who trusts in you.\n[C1]You are my God, have mercy on me, Lord,\nfor I cry to you all day long.\nGive joy to your servant, O Lord,\nfor to you I lift up my soul.[/C1]" },
+            { name: "PSALM 86", lyrics: "O Lord, you are good and forgiving,\nfull of love to all who call.\nGive heed, O Lord, to my prayer\nand attend to the sound of my voice.\n[C1]In the day of distress I will call\nand surely you will reply.\nAmong the gods there is none like you, O Lord;\nnor work to compare with yours.[/C1]" },
+            { name: "PSALM 86", lyrics: "All the nations shall come to adore you\nand glorify your name, O Lord:\nfor you are great and do marvelous deeds,\nyou who alone are God.\n[C1]+ Show me, Lord, your way\nso that I may walk in your truth.\nGuide my hear to fear your name.[/C1]" },
+            { name: "PSALM 86", lyrics: "I will praise you, Lord my God, with all my hear\nand glorify your name for ever;\nfor your love to me has been great:\nyou have saved me from the depths of the grave.\n[C1]+ The proud have risen against me;\nruthless men seek my life:\nto you the pay ne heed.[/C1]" },
+            { name: "PSALM 86", lyrics: "But you, God of mercy and compassion,\nslow to anger, O Lord,\nabounding in love and truth\nturn and take pity on me.\n[C1]O give your strength to your servant\nand save your handmaid’s son.\n+ Show me a sign of your favor\nthat my foes may see to their shame\nthat you console me and give me your help.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 86)[/F1]\nGive joy to your servant, Lord; to you I lift up my heart.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 98)[/F1]\nLet us celebrate with joy in the presence of our Lord and King." },
+            { name: "PSALM 98", lyrics: "Sing a new song to the Lord\nfor he has worked wonders.\nHis right hand and his holy arm\nhave brought salvation.\n[C1]The Lord has made known his salvation;\nhas shown his justice to the nations.\nHe has remembered his truth and love\nfor the house of Israel.[/C1]" },
+            { name: "PSALM 98", lyrics: "All the ends of the earth have seen\nthe salvation of our God.\nShout to the Lord, all the earth,\nring out your joy.\n[C1]Sing psalms to the Lord with the harp\nwith the sound of music.\nWith trumpets and the sound of the horn\nacclaim the King, the Lord.[/C1]" },
+            { name: "PSALM 98", lyrics: "Let the sea and all within it thunder;\nthe world, and all its peoples.\nLet the rivers clap their hands\nand the hills ring out their joy.\n[C1]Rejoice at the presence of the Lord,\nfor he comes to rule the earth.\nHe will rule the world with justice\nand the peoples with fairness.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 98)[/F1]\nLet us celebrate with joy in the presence of our Lord and King.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+{
+        title: "Morning Prayer WK3 Thursday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 87)[/F1]\nGlorious things are said of you, city of God." },
+            { name: "PSALM 87", lyrics: "On the holy mountain is his city\ncherished by the Lord.\nThe Lord prefers that gates of Zion\nto all Jacob’s dwellings.\nOf you are told glorious things,\nO city of God!\n[C1]“Babylon and Egypt I will count\namong those who know me;\nPhilistia, Tyre, Ethiopia,\nthese will be her children\nand Zion shall be called ‘Mother’\nfor all shall be her children.”[/C1]" },
+            { name: "PSALM 87", lyrics: "It is he, the Lord Most High,\nwho gives each his place.\nIn his register of peoples he writes:\n“These are her children,”\nand while they dance they will sing:\n“In you all find their home.”" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 87)[/F1]\nGlorious things are said of you, O city of God.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 99)[/F1]\nGive praise to the Lord our God, bow down before his holy mountain." },
+            { name: "PSALM 99", lyrics: "+ The Lord is king; the peoples tremble.\nThe is throned on the cherubim; the earth quakes.\nThe Lord is great in Zion.\n[C1]+ He is supreme over all the peoples.\nLet them praise his name, so terrible and great.\nHe is holy, full of power.[/C1]" },
+            { name: "PSALM 99", lyrics: "+ You are king who loves what is right;\nyou have established equity, justice and right;\nyou have established them in Jacob.\n[C1]+ Exalt the Lord our God;\nbow down before Zion, his footstool.\nHe the Lord is holy.[/C1]" },
+            { name: "PSALM 99", lyrics: "+ Among his priests were Aaron and Moses,\namong those who invoked his name was Samuel.\nThey invoked the Lord and he answered.\n[C1]+ To them he spoke on the pillar of cloud.\nThey did his will; they kept the law,\nwhich he, the Lord, had given.[/C1]" },
+            { name: "PSALM 99", lyrics: "+ O Lord our God, you answered them.\nFor them you were a God who forgives;\nyet you punish all their offenses.\n[C1]+ Exalt the Lord our God;\nbow down before his holy mountain\nfor the Lord our God is holy.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 99)[/F1]\nGive praise to the Lord our God, bow down before his holy mountain.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+{
+        title: "Morning Prayer WK3 Friday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 51)[/F1]\nYou alone I have grieved by my sin; have pity on me, O Lord." },
+            { name: "PSALM 51", lyrics: "Have mercy on me, God, in your kindness.\nIn your compassion blot out my offense.\nO wash me more and more from my guilt\nand cleanse me from my sin.\n[C1]My offenses truly I know them;\nmy sin is always before me.\nAgainst you, you alone, have I sinned;\nwhat is evil in your sight I have done.[/C1]" },
+            { name: "PSALM 51", lyrics: "That you may be justified when you give sentence\nand be without reproach when you judge.\nO see, in guilt I was born,\na sinner was I conceived.\n[C1]Indeed you love truth in the heart;\nthen in the secret of my heart teach me wisdom.\nO purify me, then I shall be clean;\nO wash me, I shall be whiter than snow.[/C1]" },
+            { name: "PSALM 51", lyrics: "Make me hear rejoicing and gladness,\nthat the bones you have crushed may revive.\nFrom my sins turn away your face\nand blot out all my guilt.\n[C1]A pure heart create for me, O God,\nput a steadfast spirit within me.\nDo not cast me away from your presence,\nnor deprive me of your holy spirit.[/C1]" },
+            { name: "PSALM 51", lyrics: "Give me again the joy of your help;\nwith a spirit of fervor sustain me,\nthat I may teach transgressors your ways\nand sinners may return to you.\n[C1]O rescue me, God, my helper,\nand my tongue shall ring out your goodness.\nO Lord, open my lips\nand my mouth shall declare your praise.[/C1]" },
+            { name: "PSALM 51", lyrics: "For in sacrifice you take no delight,\nburnt offering from me you would refuse,\nmy sacrifice, a contrite spirit.\nA humbled, contrite heart you will not spurn.\n[C1]In your goodness, show favor to Zion:\nrebuild the walls of Jerusalem.\nThen you will be pleased with lawful sacrifice,\nholocausts offered on your altar.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 51)[/F1]\nYou alone I have grieved by my sin; have pity on me, O Lord.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 100)[/F1]\nThe Lord is God; we are his people, the flock he shepherds." },
+            { name: "PSALM 100", lyrics: "+ Cry out with joy to the Lord, all the earth.\nServe the Lord with gladness.\nCome before him, singing for joy.\n[C1]+ Know that he, the Lord, is God.\nHe made us, we belong to him,\nwe are his people, the sheep of his flock.[/C1]" },
+            { name: "PSALM 100", lyrics: "+ Go within his gates, giving thanks.\nEnter his courts with songs of praise.\nGive thanks to him and bless his name.\n[C1]+ Indeed, how good is the Lord,\neternal his merciful love.\nHe is faithful from age to age.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 100)[/F1]\nThe Lord is God; we are his people, the flock he shepherds.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+{
+        title: "Morning Prayer WK3 Saturday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 119:145 – 152)[/F1]\nLord, you are near to us, and all your ways are true." },
+            { name: "PSALM 119:145 – 152", lyrics: "I call with all my heart; Lord, hear me,\nI will keep your commands.\nI call upon you, save me\nand I will do your will.\n[C1]I rise before the dawn and cry for help,\nI hope in your word.\nMy eyes watch through the night\nto ponder your promise.[/C1]" },
+            { name: "PSALM 119:145 – 152", lyrics: "In your love hear my voice, o Lord;\ngive me life by your decrees.\nThose who harm me unjustly drew near\nthey are far from your law.\n[C1]But, you O Lord, are close:\nyour commands are truth.\nLong have I known that your will’\nis established for ever.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 119:145 – 152)[/F1]\nLord, you are near to us, and all your ways are true.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 117)[/F1]\nThe Lord remains faithful to his promise for ever." },
+            { name: "PSALM 117", lyrics: "O praise the Lord, all you nations,\nacclaim him all you peoples!\n[C1]Strong is his love for us;\nhe is faithful for ever.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 117)[/F1]\nThe Lord remains faithful to his promise for ever.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK4 Monday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 90)[/F1]\nEach morning, Lord,\nyou fill is with your kindness." },
+            { name: "PSALM 90", lyrics: "O Lord, you have been our refuge\nfrom one generation to the next.\n+ Before the mountains were born\nor the earth or the world brought forth,\nyou are God, without beginning or end.\n[C1]You turn men back to dust\nand say: “Go back, sons of men.”\n+ To your eyes a thousand years\nare like yesterday, come and gone,\nno more than a watch in the night.[/C1]" },
+            { name: "PSALM 90", lyrics: "You sweep men away like a dream,\nlike the grass which springs up in the morning.\nIn the morning it springs up and flowers:\nby evening it withers and fades.\n[C1]So we are destroyed in your anger,\nstruck with terror in your furry.\nOur guilt lies open before you;\nour secrets in the light of your face.[/C1]" },
+            { name: "PSALM 90", lyrics: "All our days pass way in your anger.\nOur life is over like a sigh.\nOur span is seventy years,\nor eighty for those who are strong.\n[C1]And most of these are emptiness and pain.\nThey pass swiftly and we are gone.\nWho understands the power of your anger\nand fears the strength of your fury?[/C1]" },
+            { name: "PSALM 90", lyrics: "Make us know the shortness of our life\nthat we may gain wisdom of heart.\nLord, relent! Is your anger for ever?\nShow pity to your servants.\n[C1]In the morning, fill us with your love;\nwe shall exult and rejoice all our days.\nGive us joy to balance our affliction\nfor the years when we knew misfortune.[/C1]" },
+            { name: "PSALM 90", lyrics: "Show forth your work to your servants;\nlet your glory shine on their children.\n+ Let the favor of the Lord be upon us:\ngive success to the work of our hands.\nGive success to the work of our hands." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 90)[/F1]\nEach morning, Lord,\nyou fill us with your kindness.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 135:1-12)[/F1]\nYou who stand in his sanctuary,\npraise the name of the Lord." },
+            { name: "PSALM 135:1-12", lyrics: "Praise the name of the Lord,\npraise him, servants of the Lord,\nwho stand in the house of the Lord\nin the courts of the house of our God.\n[C1]Praise the Lord for the Lord is good.\nSing a psalm to his name for the is loving.\nFor the Lord has chosen Jacob for himself\nand Israel for his own possession.[/C1]" },
+            { name: "PSALM 135:1-12", lyrics: "For I know that the Lord is great,\nthat our Lord is high above all gods.\nThe Lord does whatever he wills,\nin heaven, on earth, in the seas.\n[C1]+ He summons clouds from the ends of the earth;\nmakes lightning produce rain;\nfrom his treasuries he sends forth the wind.[/C1]" },
+            { name: "PSALM 135:1-12", lyrics: "The first-born of the Egyptians he smote,\nof man and beast alike.\n+ Signs and wonders he worked\nIn the midst of your land, O Egypt,\nagainst Pharaoh and all his servants\n[C1]Nations in their greatness he struck\nand kings in their splendor he slew.\n+ Sihon, king of Amorites.\nOg, the king of Bashan,\nand all the kingdoms of Canaan.\nHe let Israel inherit their land;\non his people their land he bestowed.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 135:1-12)[/F1]\nYou who stand in his sanctuary,\npraise the name of the Lord.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK4 Tuesday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 101)[/F1]\nI will sing to you, O Lord;\nI will learn from you\nthe way of perfection." },
+            { name: "PSALM 101", lyrics: "My song is of mercy and justice;\nI sing to you, O Lord.\nI will walk in the way of perfection.\nO when, Lord, will you come?\n[C1]I will walk with blameless heart\nwithin my house;\nI will not set before my eyes\nwhatever is base.[/C1]" },
+            { name: "PSALM 101", lyrics: "I will hate the ways of the crooked;\nthey shall not be my friends.\nThe false-hearted must keep far away;\nthe wicked I disown.\n[C1]The man who slanders his neighbor in secret\nI will bring to silence.\nThe man of proud looks and haughty heart\nI will never endure.[/C1]" },
+            { name: "PSALM 101", lyrics: "I look to the faithful in the land\nthat they may dwell with me.\nHe who walks in the way of perfection\nshall be my friend.\n[C1]No man who practices deceit\nshall live within my house.\nNo man who utters lies shall stand\nbefore my eyes.[/C1]" },
+            { name: "PSALM 101", lyrics: "Morning by morning I will silence\nall the wicked in the land,\nuprooting from the city of the Lord\nall who do evil." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 101)[/F1]\nI will sing to you, O Lord;\nI will learn from you\nthe way of perfection.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 144:1 – 10)[/F1]\nO God, I will sing to you a new song." },
+            { name: "PSALM 144:1 – 10", lyrics: "+ Blessed be the Lord, my rock\nWho trains my arms for battle,\nWho prepares my hands for war.\n[C1]He is my love, my fortress;\nhe is my stronghold, my savior,\nmy shield, my place of refuge.\nHe brings people under my rule.[/C1]" },
+            { name: "PSALM 144:1 – 10", lyrics: "Lord, what is man that you care for him,\nmortal man, that you keep him in mind;\nman, who is merely a breath,\nwhose life fades like a passing shadow?\n[C1]Lower your heavens and come down;\ntouch the mountains; wreathe them in smoke.\nFlash your lightnings, rout the foe,\nshoot your arrows and put them to flight.[/C1]" },
+            { name: "PSALM 144:1 – 10", lyrics: "Reach down from heaven and save me;\ndraw me out from the mighty waters,\n+ from the hands of alien foes\nwhose mouth are filled with lies,\nwhose hands are raised in perjury.\n[C1]To you, O God, will I sing a new song;\nI will play on the ten-stringed harp\nto you who give kings their victory,\nwho set David your servant free.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 144:1 – 10)[/F1]\nO God, I will sing to you a new song.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK4 Wednesday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 108)[/F1]\nMy heart is ready, O God,\nmy heart is ready." },
+            { name: "PSALM 108", lyrics: "My heart is ready, O God;\nI will sing, sing your praise.\n+ Awake, my soul;\nawake, lyre and harp,\nI will awake the dawn\n[C1]I will thank you, Lord, among the peoples,\namong the nations I will praise you,\nfor your love reaches to the heavens\nand your truth to the skies.\nO God, arise above the heavens;\nmay your glory shine on earth![/C1]" },
+            { name: "PSALM 108", lyrics: "O come and deliver your friends;\nhelp with your right hand and reply.\n+ From his holy place God has made this promise:\n“I will triumph and divide the land of Shechem;\nI will measure out the valley of Succoth.\n[C1]+ Gilead is mine and Manasseh.\nEphraim I take for my helmet,\nJudah for my commander’s staff.\n+ Moab I will use for my washbowl,\nOn Edom I will plant my shoe.\nOver the Philistines I will shout in triumph.”[/C1]" },
+            { name: "PSALM 108", lyrics: "But who will lead me to conquer the fortress?\nWho will bring me face to face the Edom?\nWill you utterly reject us, O God,\nAnd no longer march with our enemies?\n[C1]Give us help against the foe:\nFor the help of man is vain.\nWith God we shall do bravely\nAnd he will trample down our foes.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 108)[/F1]\nMy heart is ready, O God,\nmy heart is ready.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 146)[/F1]\nI will praise my God\nall the days of my life." },
+            { name: "PSALM 146", lyrics: "+ My soul, give praise to the Lord;\nI will praise the Lord all my days,\nmake music to my God while I live.\n[C1]Put no trust in princes,\nin mortal men in whom there is no help.\nTake the breath, they return to clay\nand their plans that the day come to nothing.[/C1]" },
+            { name: "PSALM 146", lyrics: "He is happy who is helped by Jacob’s God,\nwhose hope is in the Lord his God.\nWho alone made heaven and earth,\nTte seas and all they contain.\n[C1]It is he who keeps the faith for ever,\nwho is just to those who are oppressed.\nIt is he who gives bread to the hungry,\nthe Lord, who sets prisoners free.[/C1]" },
+            { name: "PSALM 146", lyrics: "The Lord who gives sight to the blind,\nwho raises up those who are bowed down,\nthe Lord, who protects the stranger\nand upholds the widow and orphan.\n[C1]It is the Lord who loves the just\nbut thwarts the path of the wicked.\nThe Lord will reign for ever,\nZion’s God, from age to age.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 146)[/F1]\nI will praise my God\nall days of my life.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
+        ]
+    },
+    {
+        title: "Morning Prayer WK4 Thursday",
+        sections: [
+            { name: "LEADER", lyrics: "[F1](PREPARATORY BLESSING)[/F1]\nLet my prayer, O Lord,\ncome before you as incense,\nthe lifting of my hands\nas a sacrifice.\n[F1](SIGN OF THE CROSS)[/F1]\n" },
+            { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 143:1-11)[/F1]\nAt daybreak, be merciful to me, O Lord." },
+            { name: "PSALM 143:1-11", lyrics: "Lord, listen to my prayer:\nturn your ear to my appeal.\n+ You are faithful, you are just; give answer.\nDo not call your servant to judgment\nfor no one is just in your sight.\n[C1]The enemy pursues my soul;\nhe has crushed my life to the ground;\nhe has made me dwell in darkness\nlike the dead, long forgotten.\nTherefore my spirit fails;\nmy heart is numb within me.[/C1]" },
+            { name: "PSALM 143:1-11", lyrics: "I remember the days that are past;\nI ponder all your works.\n+ I muse on what your hand has wrought\nand to you I stretch out my hands.\nLike a parched land my soul thirsts for you.\n[C1]Lord, make haste and answer;\nfor my spirit fails within me,\ndo not hide your face\nlest I become like those in grave.[/C1]" },
+            { name: "PSALM 143:1-11", lyrics: "In the morning let me know your love.\nFor I put my trust in you.\nMake me know the way I should walk:\nto you I lift up my soul.\n[C1]Rescue me, Lord, from my enemies;\nI have fled to you for refuge.\nTeach me to do your will\nfor you, O God, are my God.\nLet your good spirit guide me\nin ways that are level and smooth.[/C1]" },
+            { name: "PSALM 143:1-11", lyrics: "For your name’s sake, Lord, save my life;\nin your justice save my soul from distress." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 143:1-11)[/F1]\nAt daybreak, be merciful to me, O Lord.[/C1]" },
+            { name: "ANTIPHON", lyrics: "[F1](PSALM 147;1-11)[/F1]\nLet us joyfully praise the Lord our God." },
+            { name: "PSALM 147;1-11", lyrics: "+ Praise the Lord for he is good;\nsing to our God for he is loving:\nto him our praise is due.\n[C1]The Lord builds up Jerusalem\nand brings back Israel’s exiles,\nhe heals the broken-hearted,\nhe binds up all their wounds.\nHe fixes the number of the stars;\nhe calls each one by name.[/C1]" },
+            { name: "PSALM 147;1-11", lyrics: "Our Lord is great and Almighty;\nhis wisdom can never be measured.\nThe Lord raises the lowly;\nhe humbles the wicked to the dust.\nO sing to the Lord, giving thanks;\nsing psalms to our God with the harp.\n[C1]He covers the heavens with clouds;\nhe prepares the rain for the earth,\nmaking mountains sprout with grass\nand with plants to serve man’s needs.\nHe provides the beasts with their food.\nAnd young ravens that call upon him.[/C1]" },
+            { name: "PSALM 147;1-11", lyrics: "His delight is not in horses\nNor his pleasure in warriors’ strength.\nThe Lord delights in those who revere him,\nIn those who wait for his love." },
+            { name: "[C1]DOXOLOGY[/C1]", lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]" },
+            { name: "[C1]ANTIPHON[/C1]", lyrics: "[C1][F1](PSALM 147;1-11)[/F1]\nLet us joyfully praise the Lord our God.[/C1]" },
+            { name: "LEADER", lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]" }
         ]
     },
     {
@@ -5074,7 +5562,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "ANTIPHON",
@@ -5106,7 +5594,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "[C1]ANTIPHON[/C1]",
@@ -5126,7 +5614,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "[C1]ANTIPHON[/C1]",
@@ -5134,7 +5622,7 @@ const rawSongs = [
             },
             {
                 name: "LEADER",
-                lyrics: "[F1](SCRIPTURE MEDITATION)[/F1]\n[F1](PRAYER OF RESPONSE)[/F1]\n[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]"
+                lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]"
             }
         ]
     },
@@ -5151,7 +5639,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "ANTIPHON",
@@ -5179,7 +5667,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "[C1]ANTIPHON[/C1]",
@@ -5199,7 +5687,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "[C1]ANTIPHON[/C1]",
@@ -5207,7 +5695,7 @@ const rawSongs = [
             },
             {
                 name: "LEADER",
-                lyrics: "[F1](SCRIPTURE MEDITATION)[/F1]\n[F1](PRAYER OF RESPONSE)[/F1]\n[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]"
+                lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]"
             }
         ]
     },
@@ -5224,7 +5712,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "ANTIPHON",
@@ -5244,7 +5732,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "[C1]ANTIPHON[/C1]",
@@ -5268,7 +5756,7 @@ const rawSongs = [
             },
             {
                 name: "[C1]DOXOLOGY[/C1]",
-                lyrics: "[C1]Praise the Father, the Son and Holy Spirit\nBoth now and forever.\nThe God who is, who was and is to come\nAt the end of the ages.\n[/C1]"
+                lyrics: "[C1]Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.\n[/C1]"
             },
             {
                 name: "[C1]ANTIPHON[/C1]",
@@ -5276,7 +5764,7 @@ const rawSongs = [
             },
             {
                 name: "LEADER",
-                lyrics: "[F1](SCRIPTURE MEDITATION)[/F1]\n[F1](PRAYER OF RESPONSE)[/F1]\n[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]"
+                lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]"
             }
         ]
     },
@@ -5349,7 +5837,7 @@ const rawSongs = [
             },
             {
                 name: "LEADER",
-                lyrics: "[F1](SCRIPTURE MEDITATION)[/F1]\n[F1](PRAYER OF RESPONSE)[/F1]\n[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]"
+                lyrics: "[F1](PETITION)[/F1]\n[F1](THE LORD'S PRAYER)[/F1]\n[F1](SPONTANEOUS WORSHIP)[/F1]\n[F1](SCRIPTURE MEDITATION)[/F1]"
             }
         ]
     },
