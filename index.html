@@ -101,6 +101,8 @@
             height: 100vh;
             overflow: hidden;
             color: var(--color-body-on-dark);
+            -webkit-user-select: none;
+            user-select: none;
             background-image: var(--custom-background-image, url('./bg.webp'));
             background-size: cover;
             background-position: center center;
@@ -204,6 +206,8 @@
             color: var(--color-body-on-dark);
             outline: none;
             padding: 0;
+            -webkit-user-select: text;
+            user-select: text;
         }
 
         .top-search-input::placeholder {
@@ -223,6 +227,8 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: none;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .top-search-bar.has-song .top-search-input {
@@ -430,6 +436,8 @@
             background: rgba(30, 30, 32, 0.78);
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
+            -webkit-user-select: none;
+            user-select: none;
             height: 70px;
             padding: 0 24px;
             border-radius: 9999px;
@@ -467,6 +475,8 @@
             text-align: center;
             text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.5);
             transition: opacity 0.12s ease, transform 0.12s ease;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .lyric-c1 {
@@ -502,6 +512,8 @@
             background: rgba(30, 30, 32, 0.78);
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
+            -webkit-user-select: none;
+            user-select: none;
             height: 70px;
             padding: 0 24px;
             border-radius: 9999px;
@@ -1595,19 +1607,18 @@
             clearTimeout(debounce);
             const val = e.target.value;
             topClearBtn.classList.toggle('visible', val.length > 0);
+            topSearchBar.classList.remove('has-song');
             debounce = setTimeout(() => {
                 currentSearchTerm = val;
                 renderDropdown(currentSearchTerm);
                 showDropdown();
             }, 100);
         });
+        // Disable double-click word-highlight; text is selected by click-hold-drag only
+        topSearchInput.addEventListener('mousedown', e => {
+            if (e.detail > 1) e.preventDefault();
+        });
         topSearchInput.addEventListener('focus', () => {
-            if (currentSong) {
-                // If a song is already playing, start a fresh search
-                currentSearchTerm = '';
-                topSearchInput.value = '';
-                topClearBtn.classList.remove('visible');
-            }
             renderDropdown(currentSearchTerm);
             showDropdown();
         });
@@ -1623,9 +1634,14 @@
         searchShellEl.addEventListener('pointerdown', (e) => {
             if (e.target === topClearBtn) return;
             if (songDropdown.contains(e.target)) return; // let dropdown item clicks work
+            if (e.target === topSearchInput) {
+                // Press directly on the text: leave it untouched so the user can
+                // place the caret or click-hold-drag to highlight and edit it.
+                return;
+            }
             // Focus on press (not click) so a press anywhere in the search area — incl. the
             // rounded-pill corners that fall outside the pill itself — still opens search.
-            if (e.target !== topSearchInput) e.preventDefault();
+            e.preventDefault();
             if (currentSong) {
                 // Reopen search to pick a different song; keep current song playing until a new one is selected
                 currentSearchTerm = '';
@@ -1673,7 +1689,11 @@
     }
 
     function enableFullscreen() {
-        mainArea.addEventListener('dblclick', toggleFullscreen);
+        document.addEventListener('dblclick', (e) => {
+            // Anywhere except the search bar/dropdown (typing & picking songs)
+            if (e.target.closest('#searchShell')) return;
+            toggleFullscreen();
+        });
         let cursorHideTimer = null;
 
         const showCursorTemporarily = () => {
