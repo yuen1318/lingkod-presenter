@@ -36,7 +36,7 @@ const rawSongs = [
     {
         title: "All I Desire Is You",
         sections: [
-            { name: "VERSE", lyrics: "O Lord, my God\nAll I desire is You. [F1](2x)[/F1]" },
+            { name: "VERSE", lyrics: "O Lord, my God\nAll I desire is You.\n[F1](2x)[/F1]" },
             { name: "END", lyrics: "More precious than silver\nMore costly than gold\nNo riches on the earth\ncompares with You.\nAnd what can this world offer\nWhen all I desire is You?" }
         ]
     },
@@ -4146,7 +4146,7 @@ const rawSongs = [
             { name: "CHORUS", lyrics: "All hail the victory of the Lamb\nCreation's king whose blood has foiled the serpent's plan\nRaised up to sit at God's right hand\nHoly, holy, holy Lord!" },
             { name: "BRIDGE", lyrics: "You are the first and last\nYour kingdom shall not pass\nYour reign established for the ages\nOur Saviour crucified\nYour wounds now glorified\nEnthroned upon your people's praises" },
             { name: "CHORUS", lyrics: "All hail the victor, Jesus Christ\nCreation ransomed in your sovereign sacrifice\nYour death triumphant wins us life\nHoly, holy, holy Lord!" },
-            { name: "END", lyrics: "All hail the victory of the Lamb\nCreation's king whose blood has foiled the serpent's plan\nRaised up to sit at God's right hand\nHoly, holy, holy Lord! [F1](2x)[/F1]" }
+            { name: "END", lyrics: "All hail the victory of the Lamb\nCreation's king whose blood has foiled the serpent's plan\nRaised up to sit at God's right hand\nHoly, holy, holy Lord!\n[F1](2x)[/F1]" }
         ]
     },
     {
