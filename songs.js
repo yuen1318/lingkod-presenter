@@ -4263,7 +4263,7 @@ const rawSongs = [
         ]
     },
     {
-        title: "LD - Ordinary Time",
+        title: "Lord’s Day - Ordinary Time",
         sections: [
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In the beginning was the Word,\nAnd the Word was with God,\nAnd the Word was God.\n[C1]All things were made through Him,\nand without Him nothing was made\nthat has been made.[/C1]" },
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In Him was life,\nAnd the life\nwas the light of men.\n[C1]The light shines in the darkness,\nand the darkness\nhas not overcome it.[/C1]" },
@@ -4309,7 +4309,7 @@ const rawSongs = [
         ]
     },
     {
-        title: "LD - Advent",
+        title: "Lord’s Day - Advent",
         sections: [
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In the beginning was the Word,\nAnd the Word was with God,\nAnd the Word was God.\n[C1]All things were made through Him,\nand without Him nothing was made\nthat has been made.[/C1]" },
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In Him was life,\nAnd the life\nwas the light of men.\n[C1]The light shines in the darkness,\nand the darkness\nhas not overcome it.[/C1]" },
@@ -4355,7 +4355,7 @@ const rawSongs = [
         ]
     },
     {
-        title: "LD - Christmas",
+        title: "Lord’s Day - Christmas",
         sections: [
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In the beginning was the Word,\nAnd the Word was with God,\nAnd the Word was God.\n[C1]All things were made through Him,\nand without Him nothing was made\nthat has been made.[/C1]" },
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In Him was life,\nAnd the life\nwas the light of men.\n[C1]The light shines in the darkness,\nand the darkness\nhas not overcome it.[/C1]" },
@@ -4401,7 +4401,7 @@ const rawSongs = [
         ]
     },
     {
-        title: "LD - Lent",
+        title: "Lord’s Day - Lent",
         sections: [
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In the beginning was the Word,\nAnd the Word was with God,\nAnd the Word was God.\n[C1]All things were made through Him,\nand without Him nothing was made\nthat has been made.[/C1]" },
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In Him was life,\nAnd the life\nwas the light of men.\n[C1]The light shines in the darkness,\nand the darkness\nhas not overcome it.[/C1]" },
@@ -4447,7 +4447,7 @@ const rawSongs = [
         ]
     },
     {
-        title: "LD - Easter",
+        title: "Lord’s Day - Easter",
         sections: [
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In the beginning was the Word,\nAnd the Word was with God,\nAnd the Word was God.\n[C1]All things were made through Him,\nand without Him nothing was made\nthat has been made.[/C1]" },
             { name: "ASSISTANT-[C1]GROUP[/C1]", lyrics: "In Him was life,\nAnd the life\nwas the light of men.\n[C1]The light shines in the darkness,\nand the darkness\nhas not overcome it.[/C1]" },

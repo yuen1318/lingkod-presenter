@@ -10,7 +10,13 @@
     <link rel="preload" href="./Raleway/static/Raleway-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./Raleway/static/Raleway-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./Raleway/static/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <script src="./songs.js"></script>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <script>
+        // A saved custom background loads async from IndexedDB; hide the default until it arrives so it never flashes
+        try { if (localStorage.getItem('lingkod-custom-bg')) document.documentElement.classList.add('custom-bg-pending'); } catch {}
+    </script>
+    <link rel="icon" href="./icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="./icon.png">
     <style>
         @font-face {
             font-family: 'Raleway';
@@ -40,48 +46,42 @@
             font-style: normal;
             font-display: swap;
         }
-        @font-face {
-            font-family: 'Raleway';
-            src: url('./Raleway/static/Raleway-ExtraBold.woff2') format('woff2');
-            font-weight: 800;
-            font-style: normal;
-            font-display: swap;
-        }
         /* ============================================================
-           APPLE DESIGN SYSTEM — Lyric Presenter (Transparent Nav)
+           DESIGN TOKENS — Lyric Presenter (Transparent Nav)
         ============================================================ */
         :root {
             --color-primary: #0066cc;
             --color-primary-focus: #0071e3;
             --color-primary-on-dark: #2997ff;
-            --color-canvas: #ffffff;
-            --color-canvas-parchment: #f5f5f7;
-            --color-surface-pearl: #fafafc;
-            --color-surface-tile-1: #272729;
-            --color-surface-tile-2: #2a2a2c;
-            --color-surface-tile-3: #252527;
-            --color-surface-black: #000000;
-            --color-ink: #1d1d1f;
             --color-body-on-dark: #ffffff;
-            --color-body-muted: #cccccc;
-            --color-ink-muted-80: #333333;
-            --color-ink-muted-48: #7a7a7a;
-            --color-hairline: #e0e0e0;
-            --color-divider-soft: #f0f0f0;
-            --color-chip-translucent: #d2d2d7;
+            --color-text-muted: rgba(255, 255, 255, 0.66);
+            --color-highlight: #FAD539;
+
+            /* Shared "dark glass" chrome for pills, dropdown and panels */
+            --chrome-bg: rgba(22, 22, 26, 0.8);
+            --chrome-bg-strong: rgba(22, 22, 26, 0.92);
+            --chrome-border: rgba(255, 255, 255, 0.12);
+            --chrome-blur: saturate(180%) blur(20px);
+            --chrome-shadow: 0 6px 24px rgba(0, 0, 0, 0.22), 0 1px 3px rgba(0, 0, 0, 0.18);
+            --hover-bg: rgba(255, 255, 255, 0.08);
+            --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+            /* Lyric panel: dark enough for projector contrast on light backgrounds */
+            --panel-bg: radial-gradient(ellipse at center, rgba(12, 12, 18, 0.58) 0%, rgba(12, 12, 18, 0.72) 100%);
+            --panel-border: rgba(255, 255, 255, 0.14);
 
             --font-display: "Raleway", "SF Pro Display", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
             --font-body: "Raleway", "SF Pro Text", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 
-            --type-nav: 400 12px/1.0 var(--font-body);
             --type-caption: 400 14px/1.43 var(--font-body);
-            --type-caption-strong: 600 14px/1.29 var(--font-body);
             --type-body: 400 17px/1.47 var(--font-body);
             --type-body-strong: 600 17px/1.24 var(--font-body);
-            --type-tagline: 600 21px/1.19 var(--font-body);
-            --type-display-lg: 600 40px/1.10 var(--font-display);
-            --type-fine-print: 400 12px/1.0 var(--font-body);
-            --type-button: 400 14px/1.29 var(--font-body);
+            --type-button: 500 14px/1.29 var(--font-body);
+        }
+
+        ::selection {
+            background: rgba(41, 151, 255, 0.45);
+            color: #fff;
         }
 
         * {
@@ -99,6 +99,7 @@
             font: var(--type-body);
             letter-spacing: -0.374px;
             height: 100vh;
+            height: 100dvh;
             overflow: hidden;
             color: var(--color-body-on-dark);
             -webkit-user-select: none;
@@ -109,6 +110,11 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             position: relative;
+        }
+
+        html.custom-bg-pending body {
+            background-image: none;
+            background-color: #000;
         }
 
         /* ============================================================
@@ -169,29 +175,30 @@
             height: 70px;
             width: 100%;
             max-width: var(--search-pill-w, 720px);
-            background: rgba(30, 30, 32, 0.78);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: var(--chrome-bg);
+            backdrop-filter: var(--chrome-blur);
+            -webkit-backdrop-filter: var(--chrome-blur);
+            border: 1px solid var(--chrome-border);
             border-radius: 9999px;
             display: flex;
             align-items: center;
             padding: 0 24px;
             gap: 12px;
             cursor: text;
-            transition: transform 120ms ease, background-color 160ms ease, box-shadow 160ms ease, max-width 200ms ease;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+            transition: background-color 160ms ease, box-shadow 160ms ease, border-color 160ms ease, max-width 240ms var(--ease-out);
+            box-shadow: var(--chrome-shadow);
         }
 
         .song-search-bar:focus-within {
-            outline: 2px solid var(--color-primary-focus);
-            outline-offset: 2px;
+            background: var(--chrome-bg-strong);
+            border-color: rgba(41, 151, 255, 0.7);
+            box-shadow: var(--chrome-shadow), 0 0 0 3px rgba(41, 151, 255, 0.28);
         }
 
         .song-search-icon {
             width: 28px;
             height: 28px;
-            color: rgba(255, 255, 255, 0.55);
+            color: var(--color-text-muted);
             flex-shrink: 0;
         }
 
@@ -208,10 +215,11 @@
             padding: 0;
             -webkit-user-select: text;
             user-select: text;
+            caret-color: var(--color-primary-on-dark);
         }
 
         .song-search-input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
+            color: var(--color-text-muted);
         }
 
         .selected-song-search-result-title {
@@ -245,7 +253,11 @@
 
         .song-search-bar.song-selected {
             cursor: pointer;
-            background: rgba(30, 30, 32, 0.86);
+            background: var(--chrome-bg-strong);
+        }
+
+        .song-search-bar.song-selected:hover {
+            border-color: rgba(255, 255, 255, 0.24);
         }
 
         .clear-song-search-button {
@@ -258,7 +270,7 @@
             border-radius: 50%;
             border: none;
             background: rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--color-text-muted);
             display: none;
             align-items: center;
             justify-content: center;
@@ -281,6 +293,25 @@
             background: rgba(255, 255, 255, 0.18);
         }
 
+        .clear-song-search-button:focus-visible {
+            outline: 2px solid var(--color-primary-on-dark);
+            outline-offset: 2px;
+        }
+
+        .clear-song-search-button svg {
+            width: 45%;
+            height: 45%;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip-path: inset(50%);
+            white-space: nowrap;
+        }
+
         html.presentation-cursor-hidden,
         html.presentation-cursor-hidden * {
             cursor: none !important;
@@ -294,19 +325,22 @@
             transform: translateX(-50%);
             width: 100%;
             max-width: 720px;
-            max-height: 320px;
+            max-height: min(560px, calc(100vh - 140px));
+            max-height: min(560px, calc(100dvh - 140px));
             overflow-y: auto;
-            background: rgba(30, 30, 32, 0.94);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 18px;
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+            overscroll-behavior: contain;
+            background: var(--chrome-bg-strong);
+            backdrop-filter: var(--chrome-blur);
+            -webkit-backdrop-filter: var(--chrome-blur);
+            border: 1px solid var(--chrome-border);
+            border-radius: 22px;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.2);
             padding: 8px;
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
-            transition: opacity 160ms ease, visibility 160ms ease;
+            transform: translateX(-50%) translateY(-6px);
+            transition: opacity 180ms var(--ease-out), transform 220ms var(--ease-out), visibility 180ms;
             z-index: 101;
             scrollbar-width: thin;
             scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
@@ -316,6 +350,7 @@
             opacity: 1;
             visibility: visible;
             pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
         }
 
         .song-search-results:empty {
@@ -347,50 +382,65 @@
         }
 
         .song-search-result-title {
-            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 20px;
             font: var(--type-body);
             font-size: 22px;
             letter-spacing: -0.374px;
             color: var(--color-body-on-dark);
             border-radius: 14px;
             cursor: pointer;
-            transition: background-color 160ms ease, transform 120ms ease;
+            transition: background-color 120ms ease, transform 120ms ease;
         }
 
         .song-search-result-title:hover {
-            background: rgba(255, 255, 255, 0.08);
+            background: var(--hover-bg);
         }
 
         .song-search-result-title.keyboard-highlighted {
-            background: rgba(255, 255, 255, 0.12);
-            outline: 2px solid rgba(41, 151, 255, 0.75);
-            outline-offset: -2px;
+            background: rgba(41, 151, 255, 0.22);
         }
 
         .song-search-result-title:active {
-            transform: scale(0.98);
+            transform: scale(0.99);
+        }
+
+        .song-search-result-title mark {
+            background: none;
+            color: var(--color-highlight);
         }
 
         .song-search-result-title.selected-song {
-            background: rgba(41, 151, 255, 0.14);
-            color: var(--color-body-on-dark);
             font-weight: 600;
-            box-shadow: inset 3px 0 0 var(--color-primary-on-dark);
+        }
+
+        /* "Presenting now" tag on the song currently on screen */
+        .song-search-result-title.selected-song::after {
+            content: "Presenting now";
+            flex-shrink: 0;
+            font: var(--type-button);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-primary-on-dark);
         }
 
         .search-empty-message {
-            color: rgba(255, 255, 255, 0.5);
+            color: var(--color-text-muted);
             text-align: center;
-            padding: 24px 16px;
-            font: var(--type-caption);
-            letter-spacing: -0.224px;
+            padding: 28px 16px;
+            font: var(--type-body);
         }
 
         .search-result-count {
-            padding: 8px 14px 4px;
+            padding: 8px 20px 6px;
             font: var(--type-caption);
-            letter-spacing: -0.224px;
-            color: rgba(255, 255, 255, 0.5);
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.02em;
+            color: var(--color-text-muted);
         }
 
         /* ============================================================
@@ -430,25 +480,24 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: rgba(30, 30, 32, 0.78);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            background: var(--chrome-bg);
+            backdrop-filter: var(--chrome-blur);
+            -webkit-backdrop-filter: var(--chrome-blur);
             -webkit-user-select: none;
             user-select: none;
             height: 70px;
-            padding: 0 24px;
+            padding: 0 26px;
             border-radius: 9999px;
             font: var(--type-body-strong);
-            font-size: 28px;
-            letter-spacing: 2.5px;
-            color: #d0d0d8;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 26px;
+            letter-spacing: 0.12em;
+            color: var(--color-body-on-dark);
+            border: 1px solid var(--chrome-border);
             text-transform: uppercase;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-            transition: none;
+            transition: opacity 200ms var(--ease-out);
             pointer-events: none;
             white-space: nowrap;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+            box-shadow: var(--chrome-shadow);
             visibility: hidden;
             opacity: 0;
             max-width: 100%;
@@ -470,29 +519,40 @@
             overflow-wrap: normal;
             font-family: var(--font-display);
             text-align: center;
-            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.5);
-            transition: opacity 0.12s ease, transform 0.12s ease;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.45);
+            font-kerning: normal;
+            transition: opacity 0.14s ease, transform 0.18s var(--ease-out);
             -webkit-user-select: none;
             user-select: none;
         }
 
         .lyric-highlight-primary {
-            color: #FAD539;
+            color: var(--color-highlight);
         }
 
-        .lyric-highlight-secondary {
-            color: #FAD539;
-        }
-
+        /* [F1] marks cues like (Men), (2x), (echo): smaller so the sung words lead */
         .lyric-italic-emphasis {
             font-style: italic;
             font-weight: 400;
+            font-size: 0.8em;
         }
 
         .lyric-display-panel.song-selected {
-            background: radial-gradient(ellipse at center, rgba(10, 10, 15, 0.35) 0%, rgba(10, 10, 15, 0.55) 100%);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: var(--panel-bg);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--panel-border);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .end-of-song-marker {
+            display: inline-block;
+            font-size: 0.55em;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            padding: 0.4em 0.6em;
         }
 
         /* ============================================================
@@ -506,22 +566,23 @@
             align-items: center;
             justify-content: center;
             width: auto;
-            background: rgba(30, 30, 32, 0.78);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            background: var(--chrome-bg);
+            backdrop-filter: var(--chrome-blur);
+            -webkit-backdrop-filter: var(--chrome-blur);
             -webkit-user-select: none;
             user-select: none;
             height: 70px;
-            padding: 0 24px;
+            padding: 0 26px;
             border-radius: 9999px;
             font: var(--type-body-strong);
-            font-size: 28px;
-            letter-spacing: -0.2px;
+            font-size: 26px;
+            font-variant-numeric: tabular-nums lining-nums;
+            letter-spacing: 0.04em;
             color: var(--color-body-on-dark);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid var(--chrome-border);
             pointer-events: none;
             white-space: nowrap;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+            box-shadow: var(--chrome-shadow);
             max-width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -529,6 +590,10 @@
 
         .section-count {
             white-space: nowrap;
+        }
+
+        .section-count-total {
+            color: var(--color-text-muted);
         }
 
         .section-counter.counter-hidden {
@@ -541,54 +606,123 @@
         ============================================================ */
         .welcome-message {
             display: none;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--color-body-on-dark);
             font: var(--type-body);
-            line-height: 1.8;
-            text-align: center;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-            padding: 1.5rem 2rem;
-            background: radial-gradient(ellipse at center, rgba(10, 10, 15, 0.35) 0%, rgba(10, 10, 15, 0.55) 100%);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 24px;
-            max-width: 90vw;
+            text-align: left;
+            padding: 22px 32px;
+            background: var(--chrome-bg-strong);
+            backdrop-filter: var(--chrome-blur);
+            -webkit-backdrop-filter: var(--chrome-blur);
+            border: 1px solid var(--chrome-border);
+            border-radius: 28px;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+            width: min(560px, 90vw);
+            /* Short landscape phones: scroll inside the card instead of clipping */
+            max-height: calc(100vh - 140px);
+            max-height: calc(100dvh - 140px);
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
         }
 
         .welcome-message.visible {
             display: block;
         }
 
-        .welcome-message kbd {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 6px;
-            padding: 1px 6px;
-            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-            font-size: 0.78rem;
-            line-height: 1.35;
-            letter-spacing: 0;
-            margin: 0 3px;
+        /* Action on the left, keys on the right: operators scan for the task, then read the key */
+        .welcome-rows {
+            display: grid;
+            gap: 6px;
         }
 
-        .background-controls {
+        .welcome-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 16px;
+            min-height: 36px;
+            font-size: 15px;
+        }
+
+        .welcome-row dt,
+        .welcome-row-label {
+            color: var(--color-body-on-dark);
+        }
+
+        .welcome-row dd {
             display: flex;
+            align-items: center;
+            justify-content: flex-end;
             flex-wrap: wrap;
-            justify-content: center;
+            gap: 4px;
+        }
+
+        .shortcut-or {
+            padding: 0 4px;
+            font-size: 13px;
+            color: var(--color-text-muted);
+        }
+
+        .welcome-message kbd,
+        .shortcut-gesture {
+            display: inline-block;
+            min-width: 28px;
+            text-align: center;
+            border-radius: 7px;
+            padding: 3px 8px;
+            font: var(--type-button);
+            font-size: 13px;
+            line-height: 1.4;
+            white-space: nowrap;
+        }
+
+        .welcome-message kbd {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom-width: 2px;
+        }
+
+        /* Mouse gestures are not keys: same footprint, dashed edge */
+        .shortcut-gesture {
+            border: 1px dashed rgba(255, 255, 255, 0.28);
+            color: var(--color-text-muted);
+        }
+
+        .welcome-footer {
+            display: grid;
             gap: 10px;
             margin-top: 20px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .welcome-footer .welcome-row-label {
+            color: var(--color-text-muted);
+        }
+
+        .welcome-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px;
         }
 
         .background-button {
             appearance: none;
-            border: 1px solid rgba(255, 255, 255, 0.28);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 9999px;
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.1);
             color: var(--color-body-on-dark);
             cursor: pointer;
             font: var(--type-button);
-            padding: 10px 16px;
-            transition: background-color 160ms ease, transform 120ms ease;
+            padding: 9px 16px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background-color 160ms ease, border-color 160ms ease, transform 120ms ease;
         }
 
         .background-button:hover:not(:disabled) {
@@ -605,15 +739,51 @@
         }
 
         .background-button:disabled {
-            cursor: not-allowed;
-            opacity: 0.45;
+            cursor: default;
+            opacity: 0.4;
+        }
+
+        .background-button svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
+        /* The one outward action on the card gets the accent */
+        .request-button {
+            border-color: rgba(41, 151, 255, 0.55);
+            background: rgba(41, 151, 255, 0.16);
+        }
+
+        .request-button:hover {
+            background: rgba(41, 151, 255, 0.28);
         }
 
         .background-status {
-            min-height: 1.4em;
-            margin-top: 10px;
-            color: rgba(255, 255, 255, 0.72);
+            min-height: 1.43em;
+            margin-top: 12px;
+            color: var(--color-text-muted);
             font: var(--type-caption);
+        }
+
+        .background-status:empty {
+            min-height: 0;
+            margin-top: 0;
+        }
+
+        @media (max-width: 480px) {
+            .welcome-message {
+                padding: 24px 20px 18px;
+            }
+            .welcome-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+                padding: 4px 0;
+            }
+            .welcome-row dd,
+            .welcome-actions {
+                justify-content: flex-start;
+            }
         }
 
         /* ============================================================
@@ -636,17 +806,7 @@
             transform: translateX(-12px);
         }
 
-        .section-name-badge.section-type-verse,
-        .section-name-badge.section-type-chorus,
-        .section-name-badge.section-type-bridge,
-        .section-name-badge.section-type-refrain,
-        .section-name-badge.section-type-end {
-            background: rgba(20, 20, 25, 0.75);
-            border-color: rgba(255, 255, 255, 0.15);
-            color: #d0d0d8;
-        }
-
-        .lyric-content.end-of-song-feedback,
+                .lyric-content.end-of-song-feedback,
         .section-counter.end-of-song-feedback {
             animation: endPulse 0.4s ease-out;
         }
@@ -662,28 +822,47 @@
         ============================================================ */
         .update-available-banner {
             position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            bottom: 20px;
+            left: 50%;
+            max-width: calc(100vw - 32px);
+            appearance: none;
+            border: none;
+            border-radius: 9999px;
             background: var(--color-primary);
             color: #fff;
             text-align: center;
-            padding: 14px 20px;
+            padding: 12px 22px;
             font: var(--type-body-strong);
-            font-size: 0.95rem;
+            font-size: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             z-index: 2147483647;
             cursor: pointer;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-            letter-spacing: -0.224px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, 16px);
+            transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out), visibility 0.3s;
         }
 
         .update-available-banner.visible {
-            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0);
         }
 
         .update-available-banner:hover {
             background: var(--color-primary-focus);
+        }
+
+        .update-available-banner:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 3px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
         }
 
         /* ============================================================
@@ -698,11 +877,6 @@
                 padding: 0.35rem 0.85rem;
                 border-radius: 32px;
                 max-width: 94%;
-            }
-            .presentation-stage .lyric-display-panel.song-selected {
-                background: rgba(10, 10, 15, 0.3);
-                backdrop-filter: blur(8px);
-                border: 1px solid rgba(255, 255, 255, 0.15);
             }
         }
 
@@ -755,23 +929,12 @@
                 padding: 0 20px;
                 font-size: 22px;
                 letter-spacing: 1.5px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                border-radius: 9999px;
-                align-items: center;
-                justify-content: center;
             }
             .section-name-badge {
                 left: 14px;
-                text-transform: uppercase;
-            }
-            .section-name-badge.visible {
-                visibility: visible;
-                opacity: 1;
             }
             .section-counter {
                 right: 14px;
-                display: inline-flex;
             }
             .presentation-stage .lyric-display-panel {
                 padding: 0.25rem 0.75rem;
@@ -823,15 +986,6 @@
                 font-size: 22px;
                 letter-spacing: 1.5px;
                 max-width: 25vw;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                border-radius: 9999px;
-                align-items: center;
-                justify-content: center;
-            }
-            .section-name-badge.visible {
-                visibility: visible;
-                opacity: 1;
             }
         }
 
@@ -876,6 +1030,9 @@
                 font-size: 16px;
                 border-radius: 10px;
             }
+            .search-result-count {
+                padding: 6px 14px 4px;
+            }
             .section-name-badge,
             .section-counter {
                 position: fixed;
@@ -888,33 +1045,17 @@
                 padding: 0 16px;
                 font-size: 18px;
                 letter-spacing: 1.5px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                border-radius: 9999px;
-                align-items: center;
-                justify-content: center;
             }
             .section-name-badge {
                 left: 12px;
-                text-transform: uppercase;
-            }
-            .section-name-badge.visible {
-                visibility: visible;
-                opacity: 1;
             }
             .section-counter {
                 right: 12px;
-                display: inline-flex;
             }
             .presentation-stage .lyric-display-panel {
                 padding: 0.2rem 0.6rem;
                 border-radius: 24px;
                 max-width: 96%;
-            }
-            .presentation-stage .lyric-display-panel.song-selected {
-                background: rgba(10, 10, 15, 0.2);
-                backdrop-filter: blur(6px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
             }
         }
 
@@ -959,15 +1100,6 @@
                 font-size: 20px;
                 letter-spacing: 1.5px;
                 max-width: 30vw;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                border-radius: 9999px;
-                align-items: center;
-                justify-content: center;
-            }
-            .section-name-badge.visible {
-                visibility: visible;
-                opacity: 1;
             }
         }
     </style>
@@ -983,13 +1115,15 @@
             <svg class="song-search-icon" id="songSearchIcon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
             </svg>
-            <input type="text" class="song-search-input" id="songSearchInput" placeholder="Search songs…" autocomplete="off">
+            <input type="text" class="song-search-input" id="songSearchInput" placeholder="Search songs…" autocomplete="off" spellcheck="false" enterkeyhint="go" aria-label="Search songs" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="songSearchResults">
             <span class="selected-song-search-result-title" id="selectedSongTitle">—</span>
-            <button class="clear-song-search-button" id="clearSongSearchButton" aria-label="Clear search">✕</button>
+            <button class="clear-song-search-button" id="clearSongSearchButton" type="button" aria-label="Clear search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
         </div>
-        <div class="song-search-results" id="songSearchResults"></div>
+        <div class="song-search-results" id="songSearchResults" role="listbox" aria-label="Songs"></div>
     </div>
-    <div class="section-counter counter-hidden" id="sectionCounter">
+    <div class="section-counter counter-hidden" id="sectionCounter" aria-live="polite">
         <span class="section-count" id="sectionCount">—/—</span>
     </div>
 </div>
@@ -998,24 +1132,38 @@
     <div class="lyric-display-panel" id="lyricDisplayPanel">
         <div class="lyric-content" id="lyricContent"></div>
         <div class="welcome-message" id="welcomeMessage">
-            ✨ Type in the search bar to find a song<br>
-            <kbd>←</kbd> <kbd>→</kbd> &nbsp;Navigate sections<br>
-            <kbd>alt</kbd> <kbd>Shift</kbd> <kbd>H</kbd> &nbsp;Home view<br>
-            <kbd>alt</kbd> <kbd>Shift</kbd> <kbd>F</kbd> &nbsp;Open search<br>
-            Double‑click &nbsp;Toggle fullscreen<br>
-            <kbd>Esc</kbd> &nbsp;Exit fullscreen
-            <div class="background-controls">
-                <button class="background-button" id="uploadBackgroundButton" type="button">Upload PNG background</button>
-                <button class="background-button" id="clearBackgroundButton" type="button" disabled>Clear custom background</button>
-                <input id="backgroundFileInput" type="file" accept="image/png,.png" hidden>
+            <dl class="welcome-rows" aria-label="Keyboard shortcuts">
+                <div class="welcome-row"><dt>Previous / next section</dt><dd><kbd aria-label="Left arrow">←</kbd><kbd aria-label="Right arrow">→</kbd><span class="shortcut-or">or</span><kbd>PgUp</kbd><kbd>PgDn</kbd></dd></div>
+                <div class="welcome-row"><dt>First / last section</dt><dd><kbd>Home</kbd><kbd>End</kbd></dd></div>
+                <div class="welcome-row"><dt>Open search</dt><dd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd></dd></div>
+                <div class="welcome-row"><dt>Home view</dt><dd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>H</kbd></dd></div>
+                <div class="welcome-row"><dt>Toggle fullscreen</dt><dd><span class="shortcut-gesture">Double-click</span></dd></div>
+                <div class="welcome-row"><dt>Exit fullscreen</dt><dd><kbd>Esc</kbd></dd></div>
+            </dl>
+            <div class="welcome-footer">
+                <div class="welcome-row">
+                    <span class="welcome-row-label">Song missing or wrong?</span>
+                    <div class="welcome-actions">
+                        <a class="background-button request-button" href="https://forms.gle/2r8T1VK9YNPn7kQ67" target="_blank" rel="noopener noreferrer">Send a request<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+                    </div>
+                </div>
+                <div class="welcome-row">
+                    <span class="welcome-row-label">Background</span>
+                    <div class="welcome-actions">
+                        <button class="background-button" id="uploadBackgroundButton" type="button">Upload PNG</button>
+                        <button class="background-button" id="clearBackgroundButton" type="button" disabled>Reset to default</button>
+                        <input id="backgroundFileInput" type="file" accept="image/png,.png" hidden>
+                    </div>
+                </div>
             </div>
             <div class="background-status" id="backgroundStatus" role="status" aria-live="polite"></div>
         </div>
     </div>
 </div>
 
-<div class="update-available-banner" id="updateBanner">✨ A new version is available — tap here to refresh</div>
+<button class="update-available-banner" id="updateBanner" type="button">New version available — tap to refresh</button>
 
+<script src="./songs.js"></script>
 <script>
     const songDatabase = (typeof rawSongs !== 'undefined' && Array.isArray(rawSongs))
         ? [...rawSongs].sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }))
@@ -1026,7 +1174,26 @@
             `<div class="search-empty-message">⚠️ Unable to load song database.<br><small>Check your connection and refresh.</small></div>`;
     }
 
-    const songSearchIndex = songDatabase.map(song => ({ song, normalizedTitle: song.title.toLowerCase() }));
+    // Fold accents and drop apostrophes so "senor" finds "Señor" and "lords day" finds "Lord’s Day"
+    function normalizeSearchText(text) {
+        return text.normalize('NFD').replace(/[\u0300-\u036f'’‘]/g, '').toLowerCase();
+    }
+
+    // Folding changes length, so map the match back to the original title for highlighting
+    function findTitleMatchRange(title, query) {
+        let folded = '';
+        const origin = [];
+        for (let i = 0; i < title.length; i++) {
+            for (const ch of normalizeSearchText(title[i])) {
+                folded += ch;
+                origin.push(i);
+            }
+        }
+        const at = folded.indexOf(query);
+        return at < 0 ? null : [origin[at], origin[at + query.length - 1] + 1];
+    }
+
+    const songSearchIndex = songDatabase.map(song => ({ song, normalizedTitle: normalizeSearchText(song.title) }));
 
     let currentSong = null;
     let currentSectionIndex = 0;
@@ -1051,6 +1218,8 @@
     const clearBackgroundButton = document.getElementById("clearBackgroundButton");
     const backgroundFileInput = document.getElementById("backgroundFileInput");
     const backgroundStatus = document.getElementById("backgroundStatus");
+    const updateBanner = document.getElementById("updateBanner");
+    let updateAvailable = false;
 
     const BACKGROUND_DB_NAME = 'lyric-presenter';
     const BACKGROUND_STORE_NAME = 'settings';
@@ -1153,6 +1322,7 @@
                     return;
                 }
                 await saveCustomBackground(file);
+                rememberCustomBackground(true);
                 applyCustomBackgroundImage(file);
                 setCustomBackgroundStatus('Custom background saved on this device.');
             } catch (error) {
@@ -1163,6 +1333,7 @@
         clearBackgroundButton.addEventListener('click', async () => {
             try {
                 await deleteCustomBackground();
+                rememberCustomBackground(false);
                 restoreDefaultBackgroundImage();
                 setCustomBackgroundStatus('Custom background cleared.');
             } catch (error) {
@@ -1172,16 +1343,28 @@
         });
     }
 
+    // Hint for the <head> script so the next launch skips the default background flash
+    function rememberCustomBackground(hasCustom) {
+        try {
+            if (hasCustom) localStorage.setItem('lingkod-custom-bg', '1');
+            else localStorage.removeItem('lingkod-custom-bg');
+        } catch {}
+    }
+
     async function loadSavedCustomBackground() {
         try {
             const image = await readSavedCustomBackground();
-            if (image instanceof Blob && image.type === 'image/png') {
+            const hasCustom = image instanceof Blob && image.type === 'image/png';
+            if (hasCustom) {
                 applyCustomBackgroundImage(image);
                 setCustomBackgroundStatus('Using your saved custom background.');
             }
+            rememberCustomBackground(hasCustom);
         } catch (error) {
             console.error('Could not load custom background:', error);
             setCustomBackgroundStatus('Unable to load the saved background.');
+        } finally {
+            document.documentElement.classList.remove('custom-bg-pending');
         }
     }
 
@@ -1191,7 +1374,7 @@
     }
 
     function filterSongsByTitle(query) {
-        const normalizedQuery = query.trim().toLowerCase();
+        const normalizedQuery = normalizeSearchText(query.trim());
         if (!normalizedQuery) return [...songDatabase];
         return songSearchIndex
             .filter(({ normalizedTitle }) => normalizedTitle.includes(normalizedQuery))
@@ -1215,10 +1398,12 @@
 
     function showSongSearchResults() {
         songSearchResults.classList.add('visible');
+        songSearchInput.setAttribute('aria-expanded', 'true');
     }
 
     function hideSongSearchResults() {
         songSearchResults.classList.remove('visible');
+        songSearchInput.setAttribute('aria-expanded', 'false');
         if (currentSong) {
             updateSongSearchBar();
         }
@@ -1228,7 +1413,7 @@
         if (currentSong?.sections?.length) {
             const total = currentSong.sections.length;
             const current = currentSectionIndex + 1;
-            sectionCount.textContent = (current >= 1 && current <= total) ? `${current}/${total}` : `—/${total}`;
+            sectionCount.innerHTML = `${(current >= 1 && current <= total) ? current : '—'}<span class="section-count-total">/${total}</span>`;
         } else if (currentSong) {
             sectionCount.textContent = `0/0`;
         } else {
@@ -1246,7 +1431,6 @@
     document.body.appendChild(lyricMeasureSpan);
 
     function resizeLyricsToFitViewport() {
-        if (!lyricContent) return;
         const rawText = lyricContent.innerText;
         if (!rawText?.trim()) {
             lyricContent.style.fontSize = '';
@@ -1286,10 +1470,11 @@
         else if (longestLineForSpacing.length > 45) letterSpacing = '-0.35px';
         else if (longestLineForSpacing.length > 35) letterSpacing = '-0.25px';
 
-        lyricMeasureSpan.style.fontFamily = getComputedStyle(lyricContent).fontFamily;
-        lyricMeasureSpan.style.fontWeight = getComputedStyle(lyricContent).fontWeight;
+        const lyricStyle = getComputedStyle(lyricContent);
+        lyricMeasureSpan.style.fontFamily = lyricStyle.fontFamily;
+        lyricMeasureSpan.style.fontWeight = lyricStyle.fontWeight;
         lyricMeasureSpan.style.letterSpacing = letterSpacing;
-        lyricMeasureSpan.style.textTransform = getComputedStyle(lyricContent).textTransform;
+        lyricMeasureSpan.style.textTransform = lyricStyle.textTransform;
 
         let absMax = 5.2;
         if (vw >= 1280 && vh >= 720) absMax = 5.0;
@@ -1334,9 +1519,6 @@
         lyricContent.style.fontSize = `${finalFont}rem`;
         lyricContent.style.lineHeight = lineH;
         lyricContent.style.letterSpacing = letterSpacing;
-        lyricContent.style.whiteSpace = 'pre';
-        lyricContent.style.wordBreak = 'keep-all';
-        lyricContent.style.overflowWrap = 'normal';
     }
 
     let fontTimer = null;
@@ -1345,29 +1527,15 @@
         fontTimer = requestAnimationFrame(() => resizeLyricsToFitViewport());
     }
 
-    const badgeColorMap = {
-        'VERSE': 'section-type-verse',
-        'CHORUS': 'section-type-chorus',
-        'BRIDGE': 'section-type-bridge',
-        'REFRAIN': 'section-type-refrain',
-        'END': 'section-type-end'
-    };
-
     function updateSectionBadgeAppearance(name) {
-        sectionNameBadge.className = 'section-name-badge';
-        if (name) {
-            sectionNameBadge.classList.add('visible');
-            const colorClass = badgeColorMap[name.toUpperCase()] || 'section-type-verse';
-            sectionNameBadge.classList.add(colorClass);
-        }
+        sectionNameBadge.classList.toggle('visible', !!name);
     }
 
     const LYRIC_TAG_CLASSES = {
         C1: 'lyric-highlight-primary',
-        C2: 'lyric-highlight-secondary',
         F1: 'lyric-italic-emphasis'
     };
-    const LYRIC_TAG_PATTERN = /\[(C1|C2|F1)\]([\s\S]*?)\[\/\1\]/g;
+    const LYRIC_TAG_PATTERN = /\[(C1|F1)\]([\s\S]*?)\[\/\1\]/g;
 
     function renderLyricMarkup(text) {
         if (!text) return '';
@@ -1398,7 +1566,7 @@
         } else if (currentSong) {
             sectionNameBadge.textContent = '';
             updateSectionBadgeAppearance(null);
-            lyricContent.innerText = '♢  end of song  ♢';
+            lyricContent.innerHTML = '<span class="end-of-song-marker">End of song</span>';
             lyricDisplayPanel.classList.add('song-selected');
         } else {
             sectionNameBadge.textContent = '';
@@ -1411,6 +1579,8 @@
         if (currentSong) {
             welcomeMessage.classList.remove('visible');
         }
+        // Keep the update prompt off the projector while a song is up
+        updateBanner.classList.toggle('visible', updateAvailable && !currentSong);
         scheduleLyricResize();
         updateSectionCounter();
         updateSongSearchBar();
@@ -1424,24 +1594,22 @@
 
     async function selectSongForPresentation(song) {
         if (!song) return;
-        const wasDiff = currentSong !== song;
         document.body.classList.remove('home-screen-active');
         currentSong = song;
         currentSectionIndex = 0;
         renderCurrentSong();
         hideSongSearchResults();
+        keepScreenAwake();
 
-        if (wasDiff || currentSong) {
-            if (!document.fullscreenElement) {
-                try {
-                    await document.documentElement.requestFullscreen();
-                    lockLandscapeOrientation();
-                } catch {}
-            } else {
+        if (!document.fullscreenElement) {
+            try {
+                await document.documentElement.requestFullscreen();
                 lockLandscapeOrientation();
-            }
-            scheduleLyricResize();
+            } catch {}
+        } else {
+            lockLandscapeOrientation();
         }
+        scheduleLyricResize();
     }
 
     function transitionBetweenSections(direction, callback) {
@@ -1491,13 +1659,14 @@
 
     function renderSongSearchResults(term = "") {
         highlightedSearchIndex = -1;
+        songSearchInput.removeAttribute('aria-activedescendant');
         if (!songDatabase.length) {
-            songSearchResults.innerHTML = `<div class="search-empty-message">✨ no songs available</div>`;
+            songSearchResults.innerHTML = `<div class="search-empty-message">No songs available</div>`;
             return;
         }
         const filtered = filterSongsByTitle(term);
         if (!filtered.length) {
-            songSearchResults.innerHTML = `<div class="search-empty-message">✨ no title matches "${escapeHtmlText(term)}"</div>`;
+            songSearchResults.innerHTML = `<div class="search-empty-message">No song titles match “${escapeHtmlText(term.trim())}”</div>`;
             return;
         }
         songSearchResults.innerHTML = '';
@@ -1509,24 +1678,62 @@
         countDiv.textContent = `${filtered.length} ${filtered.length === 1 ? 'song' : 'songs'}`;
         fragment.appendChild(countDiv);
 
-        filtered.forEach(song => {
+        const query = normalizeSearchText(term.trim());
+        filtered.forEach((song, index) => {
             const div = document.createElement('div');
             div.className = 'song-search-result';
             const titleDiv = document.createElement('div');
             const isActive = currentSong?.title === song.title;
             titleDiv.className = 'song-search-result-title' + (isActive ? ' selected-song' : '');
-            titleDiv.textContent = song.title;
+            titleDiv.id = `song-option-${index}`;
+            titleDiv.setAttribute('role', 'option');
+            titleDiv.setAttribute('aria-selected', isActive);
+            const match = query ? findTitleMatchRange(song.title, query) : null;
+            if (match) {
+                const [start, end] = match;
+                const titleSpan = document.createElement('span');
+                const mark = document.createElement('mark');
+                mark.textContent = song.title.slice(start, end);
+                titleSpan.append(song.title.slice(0, start), mark, song.title.slice(end));
+                titleDiv.appendChild(titleSpan);
+            } else {
+                titleDiv.textContent = song.title;
+            }
             titleDiv.onclick = () => {
                 selectSongForPresentation(song);
             };
             div.appendChild(titleDiv);
             fragment.appendChild(div);
-            if (isActive) activeEl = div;
+            if (isActive) {
+                activeEl = div;
+                // Arrow keys step from the song on screen (it is not highlighted, so Enter still picks the first result)
+                if (!query) highlightedSearchIndex = index;
+            }
         });
         songSearchResults.appendChild(fragment);
         if (activeEl) {
-            activeEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            if (query) {
+                activeEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            } else {
+                // Unfiltered list: put the song on screen at the top of the dropdown
+                songSearchResults.scrollTop = activeEl.offsetTop - parseFloat(getComputedStyle(songSearchResults).paddingTop);
+            }
         }
+    }
+
+    // Shared by the search-bar press and Alt+Shift+F. With a song up, start from an empty box;
+    // the song keeps showing until a new one is selected.
+    function openSongSearch() {
+        if (currentSong) {
+            currentSearchTerm = '';
+            songSearchInput.value = '';
+            clearSongSearchButton.classList.remove('visible');
+            songSearchBar.classList.remove('song-selected');
+            resetSongSearchBarWidth();
+        }
+        songSearchInput.focus();
+        renderSongSearchResults(currentSearchTerm);
+        showSongSearchResults();
     }
 
     function moveSearchResultHighlight(direction) {
@@ -1538,6 +1745,7 @@
             element.classList.toggle('keyboard-highlighted', index === highlightedSearchIndex);
         });
         songElements[highlightedSearchIndex].scrollIntoView({ block: 'nearest' });
+        songSearchInput.setAttribute('aria-activedescendant', songElements[highlightedSearchIndex].id);
     }
 
     function initializeKeyboardControls() {
@@ -1549,16 +1757,7 @@
             }
             if (e.altKey && e.shiftKey && e.code === 'KeyF') {
                 e.preventDefault();
-                if (currentSong) {
-                    currentSearchTerm = '';
-                    songSearchInput.value = '';
-                    clearSongSearchButton.classList.remove('visible');
-                    songSearchBar.classList.remove('song-selected');
-                    resetSongSearchBarWidth();
-                }
-                songSearchInput.focus();
-                renderSongSearchResults(currentSearchTerm);
-                showSongSearchResults();
+                openSongSearch();
                 return;
             }
             if (document.activeElement?.id === 'songSearchInput') {
@@ -1573,7 +1772,7 @@
                     moveSearchResultHighlight(-1);
                 } else if (e.key === 'Enter') {
                     const songElements = [...songSearchResults.querySelectorAll('.song-search-result-title')];
-                    const selectedIndex = highlightedSearchIndex >= 0 ? highlightedSearchIndex : 0;
+                    const selectedIndex = Math.max(0, songElements.findIndex(el => el.classList.contains('keyboard-highlighted')));
                     if (songElements[selectedIndex]) {
                         e.preventDefault();
                         songElements[selectedIndex].click();
@@ -1581,14 +1780,20 @@
                 }
                 return;
             }
-            if (e.key === 'ArrowLeft') { e.preventDefault(); showPreviousSection(); }
-            else if (e.key === 'ArrowRight') { e.preventDefault(); showNextSection(); }
+            // Presenter remotes send PageUp/PageDown (some send Space); only while a song is up so Space still presses buttons on the welcome screen
+            if (currentSong && ['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); showNextSection(); }
+            else if (currentSong && ['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); showPreviousSection(); }
+            else if (!isTransitioning && currentSong?.sections?.length && (e.key === 'Home' || e.key === 'End')) {
+                e.preventDefault();
+                currentSectionIndex = e.key === 'Home' ? 0 : currentSong.sections.length - 1;
+                renderCurrentSong();
+            }
             else if (e.key === 'Escape') {
                 e.preventDefault();
                 if (songSearchResults.classList.contains('visible')) {
                     hideSongSearchResults();
                 } else if (document.fullscreenElement) {
-                    document.exitFullscreen();
+                    document.exitFullscreen().catch(() => {});
                 }
             }
         });
@@ -1634,21 +1839,7 @@
             // Focus on press (not click) so a press anywhere in the search area — incl. the
             // rounded-pill corners that fall outside the pill itself — still opens search.
             e.preventDefault();
-            if (currentSong) {
-                // Reopen search to pick a different song; keep current song playing until a new one is selected
-                currentSearchTerm = '';
-                songSearchInput.value = '';
-                clearSongSearchButton.classList.remove('visible');
-                songSearchBar.classList.remove('song-selected');
-                resetSongSearchBarWidth();
-                songSearchInput.focus();
-                renderSongSearchResults('');
-                showSongSearchResults();
-            } else {
-                songSearchInput.focus();
-                renderSongSearchResults(currentSearchTerm);
-                showSongSearchResults();
-            }
+            openSongSearch();
         });
 
         // Click outside closes dropdown
@@ -1660,11 +1851,26 @@
     }
 
     function togglePresentationFullscreen() {
+        // iPhone Safari has no element fullscreen; denied requests reject
         if (document.fullscreenElement) {
-            document.exitFullscreen();
+            document.exitFullscreen().catch(() => {});
         } else {
-            document.documentElement.requestFullscreen();
+            document.documentElement.requestFullscreen?.().catch(() => {});
         }
+    }
+
+    let screenWakeLock = null;
+    async function keepScreenAwake() {
+        if (!currentSong || screenWakeLock || !navigator.wakeLock || document.visibilityState !== 'visible') return;
+        try {
+            screenWakeLock = await navigator.wakeLock.request('screen');
+            screenWakeLock.addEventListener('release', () => { screenWakeLock = null; });
+        } catch {}
+    }
+
+    function releaseScreenWakeLock() {
+        screenWakeLock?.release().catch(() => {});
+        screenWakeLock = null;
     }
 
     function lockLandscapeOrientation() {
@@ -1681,8 +1887,8 @@
 
     function initializeFullscreenControls() {
         document.addEventListener('dblclick', (e) => {
-            // Anywhere except the search bar/dropdown (typing & picking songs)
-            if (songSearchContainer.contains(e.target)) return;
+            // Anywhere except the search bar/dropdown (typing & picking songs) and the welcome card buttons
+            if (songSearchContainer.contains(e.target) || welcomeMessage.contains(e.target)) return;
             togglePresentationFullscreen();
         });
         let cursorHideTimer = null;
@@ -1704,11 +1910,15 @@
                 showCursorTemporarily();
             } else {
                 unlockScreenOrientation();
+                // In fullscreen the browser consumes Esc to exit, so our keydown never fires; close search here instead
+                if (songSearchResults.classList.contains('visible') || document.activeElement === songSearchInput) {
+                    songSearchInput.blur();
+                    hideSongSearchResults();
+                }
                 clearTimeout(cursorHideTimer);
                 document.documentElement.classList.remove('presentation-cursor-hidden');
             }
             if (currentSong) scheduleLyricResize();
-            if (currentSong) sectionCounter.classList.remove('counter-hidden');
         });
     }
 
@@ -1720,7 +1930,7 @@
         }, { passive: true });
         presentationStage.addEventListener('touchend', e => {
             const t = e.changedTouches[0];
-            if (!t) return;
+            if (!t || welcomeMessage.contains(e.target)) return;
             const dx = t.clientX - startX, dy = t.clientY - startY;
             const isSwipe = Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5;
             if (isSwipe) {
@@ -1762,6 +1972,7 @@
         resetSongSearchBarWidth();
         renderCurrentSong();
         hideSongSearchResults();
+        releaseScreenWakeLock();
     }
 
     function initializeLyricLoadHandling() {
@@ -1802,12 +2013,11 @@
         initializeResizeHandling();
         initializeLyricLoadHandling();
         initializeTouchGestures();
-        currentSong = null;
+        // The browser drops the wake lock when the tab is hidden; take it back on return
+        document.addEventListener('visibilitychange', keepScreenAwake);
         renderCurrentSong();
-        renderSongSearchResults("");
-        updateSectionCounter();
-        resetSongSearchBarWidth();
-        if (document.fonts?.ready) document.fonts.ready.then(resetSongSearchBarWidth);
+        // Re-measure the title pill with the real font once it loads
+        if (document.fonts?.ready) document.fonts.ready.then(() => currentSong ? fitSearchBarToSongTitle(currentSong.title) : resetSongSearchBarWidth());
         loadSavedCustomBackground();
     }
 
@@ -1815,16 +2025,16 @@
 </script>
 <script>
 if ('serviceWorker' in navigator) {
+  // First-ever install also posts UPDATE_AVAILABLE; only a page already controlled by an older worker has an update
+  const hadController = !!navigator.serviceWorker.controller;
   navigator.serviceWorker.register('./sw.js');
   navigator.serviceWorker.addEventListener('message', event => {
-    if (event.data?.type === 'UPDATE_AVAILABLE') {
-      const banner = document.getElementById('updateBanner');
-      if (banner) {
-        banner.classList.add('visible');
-        banner.onclick = () => {
-          window.location.reload();
-        };
-      }
+    if (event.data?.type === 'UPDATE_AVAILABLE' && hadController) {
+      updateAvailable = true;
+      updateBanner.onclick = () => {
+        window.location.reload();
+      };
+      updateBanner.classList.toggle('visible', !currentSong);
     }
   });
 }
