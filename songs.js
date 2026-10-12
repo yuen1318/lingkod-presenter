@@ -1824,7 +1824,7 @@ const rawSongs = [
     {
         title: "Testify",
         sections: [
-            { name: "VERSE", lyrics: "Nothing compares to\nThe worth of knowing You\nYou show me the path of life\nAnd your grace is ever new" },
+            { name: "VERSE", lyrics: "Nothing compares to\nThe joy of knowing You\nYou show me the path of life\nAnd your grace is ever new" },
             { name: "PRE-CHORUS-1", lyrics: "For the Word became flesh and dwelt among us\nyour word that is living and true." },
             { name: "CHORUS", lyrics: "I will heed your call my God and king\nYour endless praises I will sing\nFor I have seen your glory\nFor you alone are worthy\n\nI'll follow you, leave all behind\nO with my life I'll testify\nFor I have seen your glory\nFor you alone are worthy" },
             { name: "VERSE", lyrics: "Teach me your paths Lord\nAnd guide me in your truth\nCome with your living presence\nand enflame my heart for you" },
