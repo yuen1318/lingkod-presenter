@@ -4493,6 +4493,30 @@ const rawSongs = [
         ]
     },
     {
+        title: "Lord’s Day - Closing",
+        sections: [
+            { name: "LEADER", lyrics: "Blessed be the Lord God of Israel,\nfor he has visited and redeemed his people,\nand has raised up a horn of salvation for us\nin the house of his servant David,\nas he spoke by the mouth of\nhis holy prophets from of old," },
+            { name: "LEADER", lyrics: "that we should be saved from our enemies,\nand from the hand of all who hate us;\nto perform the mercy\npromised to our fathers,\nand to remember his holy covenant,\nthe oath which he swore\nto our father Abraham," },
+            { name: "LEADER", lyrics: "to grant us that we,\nbeing delivered from the hand of our enemies,\nmight serve him without fear,\nin holiness and righteousness before\nHim all the days of our life.\nFor the day has dawned upon us from on high" },
+            { name: "LEADER", lyrics: "to give light to those who sit\nin darkness and in the shadow of death,\nto guide our feet into the way of peace.\n[F1](Luke 1:68-79)[/F1]" },
+            { name: "LEADER-[C1]GROUP[/C1]", lyrics: "[F1](Men - Pour and raise the wine)[/F1]\nBehold, God is my salvation.\n[C1]I will trust and will not be afraid.[/C1]" },
+            { name: "LEADER-[C1]GROUP[/C1]", lyrics: "For God the Lord is my strength and song.\n[C1]And he has become my salvation.[/C1]" },
+            { name: "LEADER-[C1]GROUP[/C1]", lyrics: "Therefore with joy you will\ndraw water from the wells of salvation.\nSalvation belongs to the Lord.\n[C1]Your blessing be upon your people.[/C1]" },
+            { name: "LEADER-[C1]GROUP[/C1]", lyrics: "The Lord of Hosts is with us.\n[C1]The God of Jacob is our refuge.[/C1]" },
+            { name: "LEADER-[C1]GROUP[/C1]", lyrics: "God’s people had light and joy\nand gladness and honor.\n[C1]So be it with us.[/C1]" },
+            { name: "LEADER-[C1]GROUP[/C1]", lyrics: "I will lift the cup of salvation\nand call upon the Name of the Lord.\nBlessed are you, Lord our God,\nKing of the Universe,\nwho have created the fruit of the vine.\n[C1]Amen.\n[F1](Pass the wine)[/F1][/C1]" },
+            { name: "LEADER", lyrics: "[F1](Men - Raise the bread)[/F1]" },
+            { name: "LEADER-[C1]GROUP[/C1]", lyrics: "Blessed are you, Lord our God,\nKing of the Universe, who bring forth\nbread from the earth.\n[C1]Amen.\n[F1](Begin the meal)[/F1][/C1]" },
+            { name: "LEADER-[C1]GROUP[/C1]", lyrics: "Blessed are You, Lord our God,\nKing of the Universe,\nwho sanctify us through faith\nin the resurrection of Christ\nand bless us in this day set apart\nto celebrate His victory.\nBlessed are you, Lord our God,\nwho have given us new life in your Son.\n[C1]Amen.\n[F1](Pass the wine)[/F1][/C1]" },
+            { name: "LEADER", lyrics: "Father in Heaven, grant that we may begin\nthe working days which draw near to us in peace;\nfreed from all sin and transgression,\nfilled with the joy of Your Holy Spirit,\nand following in the ways of Your Son Jesus." },
+            { name: "LEADER", lyrics: "knowing that in Christ our labor is not in vain.\nMay all that we do, in word or deed,\nbe to the praise of your glory\nthrough Jesus your Son.\nOur God and King, guide and defend\nthe people called by Your Name." },
+            { name: "LEADER", lyrics: "Strengthen and prosper all who\ncherish thoughts of good towards your people,\nand fulfill their purposes,\nbut frustrate those who devise\nevil plans against your people,\nand make their designs of no effect;" },
+            { name: "LEADER", lyrics: "as it is said,\n“Take counsel together,\nbut it will come to nothing;\nspeak a word, but it will not stand,\nfor God is with us”\n[F1](Isaiah 8:10)[/F1]" },
+            { name: "LEADER", lyrics: "Open to us, Father of Mercies\nand Lord of Forgiveness,\nin this week and in the weeks to come,\nthe gates of heavenly help and rejoicing,\nof holiness and peace,\nof the study of your teaching and of prayer.\nIn us also let the Scripture be fulfilled:" },
+            { name: "LEADER-[C1]GROUP[/C1]", lyrics: "How beautiful on the mountains\nare the feet of him who brings good news,\nwho heralds peace, brings happiness,\nproclaims salvation,\nwho says to Zion, “Your God reigns.”\n[F1](Isaiah 52:7)[/F1]\n[C1]Amen.[/C1]" },
+        ]
+    },
+    {
         title: "Night Prayers",
         sections: [
             { name: "INVOCATION", lyrics: "O God, come to my assistance.\n[C1]O Lord, make haste to help me.[/C1]" },
