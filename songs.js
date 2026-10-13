@@ -1824,12 +1824,12 @@ const rawSongs = [
     {
         title: "Testify",
         sections: [
-            { name: "VERSE", lyrics: "Nothing compares to\nThe joy of knowing You\nYou show me the path of life\nAnd your grace is ever new" },
-            { name: "PRE-CHORUS-1", lyrics: "For the Word became flesh and dwelt among us\nyour word that is living and true." },
-            { name: "CHORUS", lyrics: "I will heed your call my God and king\nYour endless praises I will sing\nFor I have seen your glory\nFor you alone are worthy\n\nI'll follow you, leave all behind\nO with my life I'll testify\nFor I have seen your glory\nFor you alone are worthy" },
-            { name: "VERSE", lyrics: "Teach me your paths Lord\nAnd guide me in your truth\nCome with your living presence\nand enflame my heart for you" },
-            { name: "PRE-CHORUS-2", lyrics: "For Your words are spirit and life\nAll for You, we will stand and fight" },
-            { name: "CHORUS", lyrics: "I will heed your call my God and king\nYour endless praises I will sing\nFor I have seen your glory\nFor you alone are worthy\n\nI'll follow you, leave all behind\nO with my life I'll testify\nFor I have seen your glory\nFor you alone are worthy\n[F1](2x)[/F1]" }
+            { name: "VERSE", lyrics: "Nothing compares to\nThe joy of knowing You\nYou show me the path of life\nAnd Your grace is ever new" },
+            { name: "PRE-CHORUS-1", lyrics: "For the Word became flesh and dwelt among us\nYour word that is living and true." },
+            { name: "CHORUS", lyrics: "I will heed your call my God and king\nYour endless praises I will sing\nFor I have seen your glory\nFor You alone are worthy\n\nI will follow You, leave all behind\nO with my life I'll testify\nFor I have seen your glory\nFor You alone are worthy" },
+            { name: "VERSE", lyrics: "Teach me Your paths Lord\nAnd guide me in Your truth\nCome with Your living presence\nand enflame my heart for You" },
+            { name: "PRE-CHORUS-2", lyrics: "For Your words are spirit and life\nAll for You, I will stand and fight" },
+            { name: "CHORUS", lyrics: "I will heed your call my God and king\nYour endless praises I will sing\nFor I have seen Your glory\nFor You alone are worthy\n\nI will follow You, leave all behind\nO with my life I'll testify\nFor I have seen Your glory\nFor You alone are worthy\n[F1](2x)[/F1]" }
         ]
     },
     {
