@@ -1,4 +1,4 @@
-const VERSION = '2.11.15'; // ← bump this on each deploy
+const VERSION = '2.12.15'; // ← bump this on each deploy
 const CACHE_NAME = `lingkod-presenter-v${VERSION}`;
 const ASSETS_TO_CACHE = [
   './',
